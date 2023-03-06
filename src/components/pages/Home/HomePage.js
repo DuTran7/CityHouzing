@@ -1,15 +1,7 @@
-import { Box, Stack, Typography } from '@mui/material';
-import ScrollContainer from 'components/shared/ScrollContainer';
-import { ChapterCarousel } from 'components/ukit/Carousel';
-import Image from 'next/image';
+import { Box, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { theme } from 'theme';
-import { KEY_ROUTER, ROUTER } from 'utils/constants';
-import ChapterCard from './ChapterCard';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination } from 'swiper';
 import { debounce } from 'lodash';
 
 export default function HomePage(props) {
@@ -56,6 +48,7 @@ export default function HomePage(props) {
       }}
     >
       Home page
+      <Typography variant="h3">sadas</Typography>
     </Box>
   );
 }

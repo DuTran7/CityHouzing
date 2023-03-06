@@ -1,7 +1,6 @@
 import { Box } from '@mui/system';
-import Header from 'components/shared/Header';
-import Head from 'next/head';
 import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 
 const DefaultLayout = ({ children, showFooter = true, seo }) => {
   return (
@@ -11,7 +10,6 @@ const DefaultLayout = ({ children, showFooter = true, seo }) => {
         <link rel="shortcut icon" href="/logo.jpg" />
       </Head>
       <Box>
-        <Header />
         <Box
           sx={{
             overflowX: {
