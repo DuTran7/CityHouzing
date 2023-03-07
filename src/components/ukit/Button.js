@@ -123,5 +123,36 @@ export const StyledBtnUnder = styled(StyledBtn)(() => ({
   textDecoration: 'underline',
   textAlign: 'center',
 }));
+export const StyledBtnContain = styled(StyledBtn)(({fontSize,fontWeight, lineHeight}) => ({
+  padding: '0',
+  // height: '34px',
+  background: theme.palette.primary.secondary,
+  color: theme.palette.text.title,
+  fontSize:fontSize,
+  fontWeight: fontWeight,
+  lineHeight,
+  '&:hover': {
+    borderColor: theme.palette.action.hoverButton,
+  },
+  textTransform: "capitalize",
+  textDecoration: 'none',
+  textAlign: 'center',
+}));
+export const StyledBtnOutlined = styled(StyledBtn)(({fontSize,fontWeight,lineHeight}) => ({
+  padding: '0',
+  background: theme.palette.common.white,
+  color: theme.palette.text.title,
+  fontSize,
+  fontWeight,
+  lineHeight,
+  textTransform: "capitalize",
+  borderColor: theme.palette.action.hoverButton,
+
+  '&:hover': {
+    borderColor: theme.palette.action.hoverButton,
+  },
+  textDecoration: 'none',
+  textAlign: 'center',
+}));
 
 export const StyledIconLabelButton = styled(StyledBtn)(() => ({}));

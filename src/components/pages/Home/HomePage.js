@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 import { debounce } from 'lodash';
+import HomeTopic from './HomeTopic';
 
 export default function HomePage(props) {
   const router = useRouter();
@@ -47,8 +48,7 @@ export default function HomePage(props) {
         overflow: 'hidden',
       }}
     >
-      Home page
-      <Typography variant="h3">sadas</Typography>
+      <HomeTopic></HomeTopic>
     </Box>
   );
 }

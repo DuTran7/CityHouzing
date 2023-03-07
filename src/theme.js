@@ -10,6 +10,7 @@ export const theme = responsiveFontSizes(
     palette: {
       primary: {
         main: '#CF1F25', // main
+        secondary: '#FFE70C', // yellow
       },
       border: 'linear-gradient(to Right, #D2FF7C, #FFEE48)',
       common: {
@@ -22,15 +23,21 @@ export const theme = responsiveFontSizes(
       },
       action: {
         hover: 'linear-gradient(to Right, #D2FF7C, #c1b435)',
+        hoverButton: "#9748FE"
       },
       text: {
         primary: '#FFFFFF',
         secondary: '#999CA0',
+        title: "#4A00A9",
+        subText: "#808080",
       },
       divider: '#292929',
       link: {
         blue: '#0C66FF',
       },
+      background: {
+        topic: "#F3F3F3",
+      }
     },
     // Config: TYPOGRAPHY
     typography: {
