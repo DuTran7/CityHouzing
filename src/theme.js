@@ -37,6 +37,7 @@ export const theme = responsiveFontSizes(
       },
       background: {
         topic: "#F3F3F3",
+        property: "#CEBAE8",
       }
     },
     // Config: TYPOGRAPHY

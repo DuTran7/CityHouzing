@@ -6,7 +6,12 @@ import { theme } from 'theme';
 function HomeTopic() {
   return (
     <Box
-      style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#F3F3F3',
+      }}
     >
       <Box
         style={{
@@ -22,7 +27,7 @@ function HomeTopic() {
             style={{
               fontWeight: 600,
               fontSize: '24px',
-              lineHeight: '29px',
+              lineheight: '29px',
               marginBottom: '32px',
             }}
           >
@@ -34,7 +39,7 @@ function HomeTopic() {
             style={{
               fontWeight: 600,
               fontSize: '69px',
-              lineHeight: '84px',
+              lineheight: '84px',
               marginBottom: '66px',
             }}
           >
@@ -45,7 +50,7 @@ function HomeTopic() {
             style={{
               fontWeight: 400,
               fontSize: '16px',
-              lineHeight: '32px',
+              lineheight: '32px',
               borderLeft: '1px solid black',
               paddingLeft: '17px',
               marginBottom: '65px',
@@ -57,10 +62,9 @@ function HomeTopic() {
           <Box>
             {/* Figma fontSize is 24px */}
             <StyledBtnContain
-              uppercase={false}
               fontSize="20px"
               fontWeight="600"
-              lineHeight="20px"
+              lineheight="20px"
               style={{ marginRight: '9%' }}
             >
               Our Services
@@ -69,7 +73,7 @@ function HomeTopic() {
               variant="outlined"
               fontSize="20px"
               fontWeight="600"
-              lineHeight="20px"
+              lineheight="20px"
             >
               About Me
             </StyledBtnOutlined>

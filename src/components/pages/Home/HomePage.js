@@ -3,9 +3,11 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 import { debounce } from 'lodash';
-import HomeTopic from './HomeTopic';
+import HomeTopic from '../../home/topic/HomeTopic';
+import OutstandingProject from '../../home/outstandingProject/OutstandingProject';
+import Property from 'components/shared/Property';
 
-export default function HomePage(props) {
+export default function H(props) {
   const router = useRouter();
   const { chapterList, isWheel } = props;
   const [chapters, setChapters] = useState(chapterList || []);
@@ -49,6 +51,7 @@ export default function HomePage(props) {
       }}
     >
       <HomeTopic></HomeTopic>
+      <Property title="Dự án nổi bật" chipContent="Property" margin="100px 0 190px 0" bodyComponent={OutstandingProject}/>
     </Box>
   );
 }
