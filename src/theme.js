@@ -9,7 +9,7 @@ export const theme = responsiveFontSizes(
   createTheme({
     palette: {
       primary: {
-        main: '#CF1F25', // main
+        main: '#4A00A9', // main
         secondary: '#FFE70C', // yellow
       },
       border: 'linear-gradient(to Right, #D2FF7C, #FFEE48)',

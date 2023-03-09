@@ -1,4 +1,5 @@
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
+import { display } from '@mui/system';
 import Image from 'next/image';
 import { theme } from 'theme';
 import BreadCrumb from '../common/breadcrumb/breadcrumb';
@@ -310,86 +311,306 @@ const Introduction = () => {
 
           <Box sx={{ margin: '0 40px 40px 40px' }}>
             <Grid container>
-              <Grid item xs={4}>
-                <Stack>
-                  <Box>
-                    <Image
-                      height={'426px'}
-                      width={'426px'}
-                      src={'/images/placeHolderImage/avataTeam1.png'}
-                    ></Image>
-                  </Box>
-                  <Box>
-                    <Box>
-                      <Typography color={'black'} variant="h3">
-                        Rosalina D. William
-                      </Typography>
+              <Grid
+                item
+                xs={4}
+                sx={{
+                  background: '#FFFFFF',
+                  padding: ' 0 5px 0 0',
+                }}
+              >
+                <Box sx={{ border: '1px solid #4A00A9' }}>
+                  <Box
+                    sx={{
+                      width: '100%',
+                      height: '426px',
+                      backgroundImage:
+                        "url('/images/placeHolderImage/avataTeam1.png')",
+                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  ></Box>
+                  <Stack>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                        marginTop: '30px',
+                      }}
+                    >
+                      <Box sx={{ mb: '30px' }}>
+                        <Typography
+                          color={theme.palette.common.black}
+                          variant="h5"
+                        >
+                          Rosalina D. William
+                        </Typography>
+                      </Box>
+                      <Box sx={{ mb: '60px' }}>
+                        <Typography
+                          color={theme.palette.common.black}
+                          variant="h6"
+                        >
+                          Real Estate Broker
+                        </Typography>
+                      </Box>
                     </Box>
-                    <Box>
-                      <Typography color={'black'} variant="h6">
-                        Real Estate Broker
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Stack>
+                  </Stack>
+                </Box>
               </Grid>
-              <Grid item xs={4}>
-                <Stack>
-                  <Box>
-                    <Image
-                      height={'426px'}
-                      width={'426px'}
-                      src={'/images/placeHolderImage/avataTeam1.png'}
-                    ></Image>
-                  </Box>
-                  <Box>
-                    <Box>
-                      <Typography
-                        color={theme.palette.common.black}
-                        variant="h5"
-                      >
-                        Rosalina D. William
-                      </Typography>
+              <Grid
+                item
+                xs={4}
+                sx={{
+                  background: '#FFFFFF',
+                  padding: ' 0 5px 0 0',
+                }}
+              >
+                <Box sx={{ border: '1px solid #4A00A9' }}>
+                  <Box
+                    sx={{
+                      width: '100%',
+                      height: '426px',
+                      backgroundImage:
+                        "url('/images/placeHolderImage/avataTeam1.png')",
+                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  ></Box>
+                  <Stack>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                        marginTop: '30px',
+                      }}
+                    >
+                      <Box sx={{ mb: '30px' }}>
+                        <Typography
+                          color={theme.palette.common.black}
+                          variant="h5"
+                        >
+                          Rosalina D. William
+                        </Typography>
+                      </Box>
+                      <Box sx={{ mb: '60px' }}>
+                        <Typography
+                          color={theme.palette.common.black}
+                          variant="h6"
+                        >
+                          Real Estate Broker
+                        </Typography>
+                      </Box>
                     </Box>
-                    <Box>
-                      <Typography
-                        color={theme.palette.common.black}
-                        variant="h6"
-                      >
-                        Real Estate Broker
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Stack>
+                  </Stack>
+                </Box>
               </Grid>
-              <Grid item xs={4}>
-                <Stack>
-                  <Box>
-                    <Image
-                      height={'426px'}
-                      width={'426px'}
-                      src={'/images/placeHolderImage/avataTeam1.png'}
-                    ></Image>
-                  </Box>
-                  <Box>
-                    <Box>
-                      <Typography color={'black'} variant="h3">
-                        Rosalina D. William
-                      </Typography>
+              <Grid
+                item
+                xs={4}
+                sx={{
+                  background: '#FFFFFF',
+                  padding: ' 0 5px 0 0',
+                }}
+              >
+                <Box sx={{ border: '1px solid #4A00A9' }}>
+                  <Box
+                    sx={{
+                      width: '100%',
+                      height: '426px',
+                      backgroundImage:
+                        "url('/images/placeHolderImage/avataTeam1.png')",
+                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  ></Box>
+                  <Stack>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                        marginTop: '30px',
+                      }}
+                    >
+                      <Box sx={{ mb: '30px' }}>
+                        <Typography
+                          color={theme.palette.common.black}
+                          variant="h5"
+                        >
+                          Rosalina D. William
+                        </Typography>
+                      </Box>
+                      <Box sx={{ mb: '60px' }}>
+                        <Typography
+                          color={theme.palette.common.black}
+                          variant="h6"
+                        >
+                          Real Estate Broker
+                        </Typography>
+                      </Box>
                     </Box>
-                    <Box>
-                      <Typography color={'black'} variant="h6">
-                        Real Estate Broker
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Stack>
+                  </Stack>
+                </Box>
               </Grid>
             </Grid>
           </Box>
         </Stack>
 
         {/* Project section */}
+        <Box sx={{ margin: '0 40px 40px 40px' }}>
+          <Grid container spacing={2}>
+            <Grid xl={4} md={12} sm={12} xs={12} item>
+              <Box
+                style={{
+                  backgroundImage: "url('/home/project.png')",
+                  backgroundPosition: 'center bottom',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  width: '100%',
+                  height: '395px',
+                  boxSizing: 'border-box',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  backgroundColor: 'rgb(250, 40, 38)',
+                }}
+              >
+                <Box
+                  style={{
+                    display: 'inline-block',
+                    boxSizing: 'border-box',
+                    width: '100%',
+                    height: '155px',
+                    textAlign: 'start',
+                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    justifyContent: 'center',
+                    paddingLeft: '25px',
+                  }}
+                >
+                  <Typography
+                    color={'#FFE70C'}
+                    style={{ marginBottom: '30px' }}
+                    variant="h7"
+                  >
+                    Bình Thạnh
+                  </Typography>
+                  <Typography
+                    color={theme.palette.common.white}
+                    style={{ marginBottom: '30px' }}
+                    variant="h5"
+                  >
+                    Xô Viết Nghệ Tĩnh Duplex
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid xl={4} md={12} sm={12} xs={12} item>
+              <Box
+                style={{
+                  backgroundImage: "url('/home/project.png')",
+                  backgroundPosition: 'center bottom',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  width: '100%',
+                  height: '395px',
+                  boxSizing: 'border-box',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  backgroundColor: 'rgb(250, 40, 38)',
+                }}
+              >
+                <Box
+                  style={{
+                    display: 'inline-block',
+                    boxSizing: 'border-box',
+                    width: '100%',
+                    height: '155px',
+                    textAlign: 'start',
+                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    justifyContent: 'center',
+                    paddingLeft: '25px',
+                  }}
+                >
+                  <Typography
+                    color={'#FFE70C'}
+                    style={{ marginBottom: '30px' }}
+                    variant="h7"
+                  >
+                    Bình Thạnh
+                  </Typography>
+                  <Typography
+                    color={theme.palette.common.white}
+                    style={{ marginBottom: '30px' }}
+                    variant="h5"
+                  >
+                    Xô Viết Nghệ Tĩnh Duplex
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid xl={4} md={12} sm={12} xs={12} item>
+              <Box
+                style={{
+                  backgroundImage: "url('/home/project.png')",
+                  backgroundPosition: 'center bottom',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  width: '100%',
+                  height: '395px',
+                  boxSizing: 'border-box',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  backgroundColor: 'rgb(250, 40, 38)',
+                }}
+              >
+                <Box
+                  style={{
+                    display: 'inline-block',
+                    boxSizing: 'border-box',
+                    width: '100%',
+                    height: '155px',
+                    textAlign: 'start',
+                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    justifyContent: 'center',
+                    paddingLeft: '25px',
+                  }}
+                >
+                  <Typography
+                    color={'#FFE70C'}
+                    style={{ marginBottom: '30px' }}
+                    variant="h7"
+                  >
+                    Bình Thạnh
+                  </Typography>
+                  <Typography
+                    color={theme.palette.common.white}
+                    style={{ marginBottom: '30px' }}
+                    variant="h5"
+                  >
+                    Xô Viết Nghệ Tĩnh Duplex
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
       </Box>
     </>
   );

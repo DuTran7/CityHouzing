@@ -8,7 +8,15 @@ import { theme } from 'theme';
 const Footer = ({ ...props }) => {
   return (
     <>
-      <Stack direction={'row'}>
+      <Stack
+        sx={{
+          backgroundColor: theme.palette.primary.main,
+          height: '140px',
+        }}
+        direction={'row'}
+        alignItems={'center'}
+        justifyContent={'space-between'}
+      >
         <Box>
           <Typography
             variant="h6"
@@ -35,14 +43,10 @@ const Footer = ({ ...props }) => {
           </Typography>
         </Box>
 
-        <Stack
-          direction={'row'}
-          spacing={12}
-          sx={{
-            color: theme.palette.common.black,
-          }}
-        >
-          <Typography variant="h4">CityHouzing© 2021</Typography>
+        <Stack direction={'row'} spacing={12}>
+          <Typography color={theme.palette.common.white} variant="h4">
+            CityHouzing© 2021
+          </Typography>
         </Stack>
       </Stack>
     </>
