@@ -1,8 +1,7 @@
 import { Box, Chip, Grid, Paper, Typography } from '@mui/material';
 import Property from 'components/shared/Property';
 import { StyledBtnContain } from 'components/ukit/Button';
-import React, { useState } from 'react';
-import { theme } from 'theme';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -12,12 +11,11 @@ const useStyles = makeStyles({
       width: '100% !important',
       height: '100% !important',
       margin: '0 !important',
-
     },
   },
 });
 
-function OutstandingProject() {
+function OutstandingProject({ data }) {
   const [projects, setProjects] = useState([
     {
       main: true,
@@ -51,6 +49,10 @@ function OutstandingProject() {
     },
   ]);
 
+  useEffect(() => {
+    console.log('OutstandingProject', data);
+  }, []);
+
   const classes = useStyles();
 
   const ProjectList = () => {
@@ -73,9 +75,8 @@ function OutstandingProject() {
                     flexDirection: 'row',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: "rgb(250, 40, 38)"
+                    backgroundColor: 'rgb(250, 40, 38)',
                   }}
-                  
                 >
                   <Box
                     style={{

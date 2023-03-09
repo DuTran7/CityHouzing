@@ -38,6 +38,9 @@ export const theme = responsiveFontSizes(
       background: {
         topic: "#F3F3F3",
         property: "#CEBAE8",
+      },
+      borderBox: {
+        box: "#C1C1C1",
       }
     },
     // Config: TYPOGRAPHY
