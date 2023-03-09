@@ -8,9 +8,10 @@ const useStyles = makeStyles({
   hoverElement: {
     // backgroundColor: 'red !important',
     '&:hover': {
-      width: '100% !important',
-      height: '100% !important',
-      margin: '0 !important',
+      width: '100%',
+      height: '100%',
+      margin: '5rem 0rem !important',
+      // padding: "0px !important",
     },
   },
 });
@@ -61,7 +62,7 @@ function OutstandingProject({ data }) {
         {projects.map((project) => {
           if (project.main) {
             return (
-              <Grid key={project.id} xl={8} md={12} sm={12} xs={12} item>
+              <Grid  key={project.id} xl={8} lg={8} md={12} sm={12} xs={12} item>
                 <Box
                   style={{
                     backgroundImage: "url('/home/project.png')",
@@ -70,7 +71,7 @@ function OutstandingProject({ data }) {
                     backgroundRepeat: 'no-repeat',
                     width: '100%',
                     height: '100%',
-                    boxSizing: 'border-box',
+                    // padding: '80px',
                     display: 'flex',
                     flexDirection: 'row',
                     alignItems: 'center',
@@ -80,10 +81,8 @@ function OutstandingProject({ data }) {
                 >
                   <Box
                     style={{
-                      display: 'inline-block',
-                      boxSizing: 'border-box',
-                      margin: '80px',
-                      padding: '45px 120px',
+                      margin: '5rem',
+                      padding: '4rem 10rem',
                       textAlign: 'center',
                       backgroundColor: 'rgba(0, 0, 0, 0.4)',
                       display: 'flex',
@@ -93,16 +92,16 @@ function OutstandingProject({ data }) {
                     }}
                     className={classes.hoverElement}
                   >
-                    <Typography style={{ marginBottom: '30px' }} variant="h3">
+                    <Typography style={{ marginBottom: '1,875' }} variant="h4">
                       {project.name}
                     </Typography>
-                    <Typography style={{ marginBottom: '30px' }} variant="h6">
+                    <Typography style={{ marginBottom: '1,875' }} variant="h6">
                       {project.description}
                     </Typography>
                     <StyledBtnContain
-                      fontSize="20px"
+                      fontSize="1,25rem"
                       fontWeight="600"
-                      lineheight="20px"
+                      lineheight="1,25rem"
                       style={{ height: 'auto' }}
                     >
                       View Details
@@ -113,7 +112,7 @@ function OutstandingProject({ data }) {
             );
           } else {
             return (
-              <Grid key={project.id} xl={4} md={6} sm={12} xs={12} item>
+              <Grid key={project.id} xl={4} md={6} lg={4} sm={12} xs={12} item>
                 <Box
                   style={{
                     backgroundImage: "url('/home/project.png')",
@@ -121,7 +120,7 @@ function OutstandingProject({ data }) {
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     width: '100%',
-                    height: '100%',
+                    height: '100%', //padding: '80px',
                     display: 'flex',
                     flexDirection: 'row',
                     alignItems: 'center',
@@ -130,10 +129,8 @@ function OutstandingProject({ data }) {
                 >
                   <Box
                     style={{
-                      display: 'inline-block',
-                      boxSizing: 'border-box',
-                      margin: '80px',
-                      padding: '45px',
+                      margin: '5rem',
+                      padding: '2.8125rem',
                       textAlign: 'center',
                       backgroundColor: 'rgba(0, 0, 0, 0.4)',
                       display: 'flex',
@@ -145,23 +142,27 @@ function OutstandingProject({ data }) {
                   >
                     <Typography
                       style={{
-                        marginBottom: '30px',
+                        marginBottom: '1,875rem',
+                        margin: 0,
                         ':hover': {
                           cursor: '#efefef',
                         },
                       }}
-                      variant="h3"
+                      variant="h4"
                     >
                       {project.name}
                     </Typography>
-                    <Typography style={{ marginBottom: '30px' }} variant="h6">
+                    <Typography
+                      style={{ marginBottom: '1,875rem'}}
+                      variant="h6"
+                    >
                       {project.description}
                     </Typography>
                     <StyledBtnContain
                       fontSize="20px"
                       fontWeight="600"
                       lineheight="20px"
-                      style={{ height: 'auto' }}
+                      style={{ height: 'auto', margin: 0 }}
                     >
                       View Details
                     </StyledBtnContain>

@@ -19,8 +19,8 @@ function News({ news }) {
         <img alt={news.title} src={news.image} width={'100%'} />
         <Box style={{ padding: '8% 8% 0 8%' }}>
           <Typography
-            style={{ color: theme.palette.text.subText, marginBottom: '20px' }}
-            variant="h5"
+            style={{ color: theme.palette.text.subText, marginBottom: '20px', fontWeight: 400 }}
+            variant="h6"
           >
             {news.createdAt}
           </Typography>
@@ -42,7 +42,7 @@ function News({ news }) {
               marginBottom: '20px',
               lineBreak: 'anywhere',
             }}
-            variant="h5"
+            variant="h6"
           >
             {news.description}
           </Typography>

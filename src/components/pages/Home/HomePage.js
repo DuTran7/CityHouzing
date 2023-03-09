@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -10,6 +10,8 @@ import News from 'components/home/news/News';
 import ListNews from 'components/home/news/ListNews';
 import { theme } from 'theme';
 import moment from 'moment';
+import BreadCrumb from '../common/breadcrumb/breadcrumb';
+import Image from 'next/image';
 
 export default function H(props) {
   const router = useRouter();
@@ -18,37 +20,16 @@ export default function H(props) {
   const [scrolling, setScrolling] = useState(false);
   const [news, setNews] = useState();
 
-  const handleOnScrollPage = () => {
-    setScrolling(true);
-    debounce(() => {
-      setScrolling(false);
-    }, 350)();
-  };
-  useEffect(() => {
-    setChapters(props?.chapterList);
-  }, [props?.chapterList]);
+  // const handleOnScrollPage = () => {
+  //   setScrolling(true);
+  //   debounce(() => {
+  //     setScrolling(false);
+  //   }, 350)();
+  // };
+  // useEffect(() => {
+  //   setChapters(props?.chapterList);
+  // }, [props?.chapterList]);
 
-  useEffect(() => {
-    const oldChapter = localStorage.getItem('CHAPTER');
-    if (oldChapter) {
-      const index = JSON.parse(oldChapter)?.index || 0;
-      const element = document.getElementById('chapter-' + --index);
-      const melement = document.getElementById('mchapter-' + --index);
-      element?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-        inline: 'start',
-      });
-      // melement?.scrollIntoView({
-      //   behavior: 'smooth',
-      //   block: 'start',
-      //   inline: 'start',
-      // });
-      setTimeout(() => {
-        localStorage.removeItem('CHAPTER');
-      }, 500);
-    }
-  }, [chapters]);
   useEffect(() => {
     setNews([
       {
@@ -101,6 +82,27 @@ export default function H(props) {
       },
     ]);
   }, []);
+  // useEffect(() => {
+  //   const oldChapter = localStorage.getItem('CHAPTER');
+  //   if (oldChapter) {
+  //     const index = JSON.parse(oldChapter)?.index || 0;
+  //     const element = document.getElementById('chapter-' + --index);
+  //     const melement = document.getElementById('mchapter-' + --index);
+  //     element?.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'start',
+  //       inline: 'start',
+  //     });
+  //     // melement?.scrollIntoView({
+  //     //   behavior: 'smooth',
+  //     //   block: 'start',
+  //     //   inline: 'start',
+  //     // });
+  //     setTimeout(() => {
+  //       localStorage.removeItem('CHAPTER');
+  //     }, 500);
+  //   }
+  // }, [chapters]);
   return (
     <Box
       sx={{

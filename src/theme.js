@@ -16,6 +16,7 @@ export const theme = responsiveFontSizes(
       common: {
         white: '#FFFFFF',
         black: '#000000',
+        grey: '#808080',
         custom: 'linear-gradient(to Right, #D2FF7C, #FFEE48)',
         grey: '#292929',
         blue: '#3362FF',
@@ -62,27 +63,36 @@ export const theme = responsiveFontSizes(
       },
       h3: {
         fontFamily: 'Red5 Helvetica',
-        fontWeight: 300,
-        fontSize: '40px',
+        fontWeight: 600,
+        fontSize: '42px',
         lineHeight: 1.5,
         fontStyle: 'normal',
       },
       h4: {
+        fontFamily: 'Red5 Helvetica',
+        fontWeight: 600,
+        fontSize: '32px',
+        lineHeight: 1.5,
+        fontStyle: 'normal',
+      },
+      h5: {
         fontFamily: 'Red5 Helvetica Light',
-        fontWeight: 300,
+        fontWeight: 600,
         fontSize: '24px',
         lineHeight: 1,
         fontStyle: 'normal',
       },
-      h5: {
-        fontWeight: 300,
+      h6: {
+        fontWeight: 600,
         fontSize: '16px',
         lineHeight: 1.75,
+        fontStyle: 'normal',
       },
-      h6: {
+      h7: {
         fontWeight: 400,
-        fontSize: '12px',
+        fontSize: '14px',
         lineHeight: 1.3,
+        fontStyle: 'normal',
       },
       caption: {
         fontFamily: 'Red5 Helvetica',
@@ -111,9 +121,11 @@ export const theme = responsiveFontSizes(
         textTransform: 'uppercase',
       },
       subtitle2: {
+        fontFamily: 'Inter',
         fontSize: '36px',
-        fontWeight: 300,
+        fontWeight: 600,
         lineHeight: 1.33,
+        fontStyle: 'normal',
       },
     },
 
