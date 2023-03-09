@@ -1,4 +1,4 @@
-import DefaultLayout from 'components/layouts/DefaultLayput';
+import DefaultLayout from 'components/layouts/DefaultLayout';
 import HomePage from 'components/pages/Home/HomePage';
 const seo = {
   title: 'Home - Red5',

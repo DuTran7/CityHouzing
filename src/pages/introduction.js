@@ -1,5 +1,6 @@
-import DefaultLayout from 'components/layouts/DefaultLayput';
-import AboutPage from 'components/pages/About/AboutPage';
+import DefaultLayout from 'components/layouts/DefaultLayout';
+import Introduction from 'components/pages/Introduction/introduction';
+// import AboutPage from 'components/pages/About/AboutPage';
 import { useEffect, useState } from 'react';
 
 const seo = {
@@ -29,7 +30,7 @@ export default function About({ isMobile }) {
 
   return (
     <DefaultLayout seo={seo}>
-      <AboutPage isMobile={isMobile} position={position} />
+      <Introduction></Introduction>
     </DefaultLayout>
   );
 }
