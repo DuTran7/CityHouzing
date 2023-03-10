@@ -53,16 +53,6 @@ const BreadCrumb = ({ title, ...props }) => {
           </Box>
         </Box>
       </Stack>
-      {/* <Box
-        sx={{
-          width: '100%',
-          display: 'flex',
-          alignItems: 'flex-start',
-          height: '225px',
-          flexDirection: 'column',
-        }}
-      >
-      </Box> */}
     </>
   );
 };

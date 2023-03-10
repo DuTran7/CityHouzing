@@ -8,10 +8,14 @@ const useStyles = makeStyles({
   hoverElement: {
     // backgroundColor: 'red !important',
     '&:hover': {
-      width: '100%',
-      height: '100%',
-      margin: '5rem 0rem !important',
+      // width: '100% !important',
+      // height: '100% !important',
+      // margin: '5rem 0rem !important',
       // padding: "0px !important",
+      backgroundColor: 'rgba(0, 0, 0, 0.4)',
+      // '.makeStyles-hoverElement-19 .box-content': {
+      //   backgroundColor: 'red',
+      // },
     },
   },
 });
@@ -62,7 +66,7 @@ function OutstandingProject({ data }) {
         {projects.map((project) => {
           if (project.main) {
             return (
-              <Grid  key={project.id} xl={8} lg={8} md={12} sm={12} xs={12} item>
+              <Grid key={project.id} xl={8} lg={8} md={12} sm={12} xs={12} item>
                 <Box
                   style={{
                     backgroundImage: "url('/home/project.png')",
@@ -72,40 +76,55 @@ function OutstandingProject({ data }) {
                     width: '100%',
                     height: '100%',
                     // padding: '80px',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+
                     backgroundColor: 'rgb(250, 40, 38)',
                   }}
                 >
                   <Box
                     style={{
-                      margin: '5rem',
-                      padding: '4rem 10rem',
-                      textAlign: 'center',
-                      backgroundColor: 'rgba(0, 0, 0, 0.4)',
                       display: 'flex',
-                      flexDirection: 'column',
+                      flexDirection: 'row',
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}
                     className={classes.hoverElement}
                   >
-                    <Typography style={{ marginBottom: '1,875' }} variant="h4">
-                      {project.name}
-                    </Typography>
-                    <Typography style={{ marginBottom: '1,875' }} variant="h6">
-                      {project.description}
-                    </Typography>
-                    <StyledBtnContain
-                      fontSize="1,25rem"
-                      fontWeight="600"
-                      lineheight="1,25rem"
-                      style={{ height: 'auto' }}
+                    <Box
+                      style={{
+                        boxSizing: 'border-box',
+                        margin: '5rem',
+                        padding: '3.125rem ',
+                        textAlign: 'center',
+                        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                        display: 'inline-flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                      className="box-content"
+                      // className={classes.hoverElement}
                     >
-                      View Details
-                    </StyledBtnContain>
+                      <Typography
+                        style={{ marginBottom: '1,875' }}
+                        variant="h4"
+                      >
+                        {project.name}
+                      </Typography>
+                      <Typography
+                        style={{ marginBottom: '1,875' }}
+                        variant="h6"
+                      >
+                        {project.description}
+                      </Typography>
+                      <StyledBtnContain
+                        fontSize="1,25rem"
+                        fontWeight="600"
+                        lineheight="1,25rem"
+                        style={{ height: 'auto' }}
+                      >
+                        View Details
+                      </StyledBtnContain>
+                    </Box>
                   </Box>
                 </Box>
               </Grid>
@@ -120,52 +139,59 @@ function OutstandingProject({ data }) {
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     width: '100%',
-                    height: '100%', //padding: '80px',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    height: '100%',
                   }}
                 >
                   <Box
                     style={{
-                      margin: '5rem',
-                      padding: '2.8125rem',
-                      textAlign: 'center',
-                      backgroundColor: 'rgba(0, 0, 0, 0.4)',
                       display: 'flex',
-                      flexDirection: 'column',
+                      flexDirection: 'row',
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}
                     className={classes.hoverElement}
                   >
-                    <Typography
+                    <Box
                       style={{
-                        marginBottom: '1,875rem',
-                        margin: 0,
-                        ':hover': {
-                          cursor: '#efefef',
-                        },
+                        boxSizing: 'border-box',
+                        margin: '5rem',
+                        padding: '1.5rem',
+                        textAlign: 'center',
+                        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
                       }}
-                      variant="h4"
+                      className="box-content"
                     >
-                      {project.name}
-                    </Typography>
-                    <Typography
-                      style={{ marginBottom: '1,875rem'}}
-                      variant="h6"
-                    >
-                      {project.description}
-                    </Typography>
-                    <StyledBtnContain
-                      fontSize="20px"
-                      fontWeight="600"
-                      lineheight="20px"
-                      style={{ height: 'auto', margin: 0 }}
-                    >
-                      View Details
-                    </StyledBtnContain>
+                      <Typography
+                        style={{
+                          marginBottom: '1,875rem',
+                          margin: 0,
+                          ':hover': {
+                            cursor: '#efefef',
+                          },
+                        }}
+                        variant="h4"
+                      >
+                        {project.name}
+                      </Typography>
+                      <Typography
+                        style={{ marginBottom: '1,875rem' }}
+                        variant="h6"
+                      >
+                        {project.description}
+                      </Typography>
+                      <StyledBtnContain
+                        fontSize="20px"
+                        fontWeight="600"
+                        lineheight="20px"
+                        style={{ height: 'auto', margin: 0 }}
+                      >
+                        View Details
+                      </StyledBtnContain>
+                    </Box>
                   </Box>
                 </Box>
               </Grid>

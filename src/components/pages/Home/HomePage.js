@@ -12,6 +12,7 @@ import { theme } from 'theme';
 import moment from 'moment';
 import BreadCrumb from '../common/breadcrumb/breadcrumb';
 import Image from 'next/image';
+import Achievement from 'components/home/achievements/Achievement';
 
 export default function H(props) {
   const router = useRouter();
@@ -124,6 +125,7 @@ export default function H(props) {
         backgroundColor={theme.palette.background.topic}
         data={news}
       ></Property>
+      <Achievement></Achievement>
     </Box>
   );
 }
