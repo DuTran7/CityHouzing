@@ -43,11 +43,11 @@ function Contact() {
     { value: '4 - 5 triệu', key: 'TD', id: Math.ceil(Math.random() * 9999) },
   ];
   console.log('errors', errors);
-  useEffect(() => {
-    setTimeout(() => {
-      debugger;
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     debugger;
+  //   }, 5000);
+  // }, []);
   // .css-454srj-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline
 
   return (
@@ -57,7 +57,7 @@ function Contact() {
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
-        height: '31.25rem',
+        height: '700px',
       }}
     >
       <Box sx={{ width: '50%', marginRight: '2rem', height: '100%' }}>
@@ -74,8 +74,9 @@ function Contact() {
           width: '50%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'space-between',
+          // justifyContent: 'space-between',
           height: '100%',
+          marginTop: '40px',
         }}
       >
         <Box>
@@ -86,6 +87,8 @@ function Contact() {
               color: theme.palette.text.content,
               fontWeight: 600,
               lineHeight: '1.438rem',
+              mt: '30px',
+              mb: '50px',
             }}
           >
             HÃY ĐỂ CHÚNG TÔI GIÚP BẠN

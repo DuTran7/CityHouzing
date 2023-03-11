@@ -29,13 +29,13 @@ const Introduction = () => {
         ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ',
     },
     {
-      imgLogo: '/images/logo/logoFeature1.png',
+      imgLogo: '/images/logo/logoFeature3.png',
       name: '  Finibus Bonorum',
       description:
         ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ',
     },
     {
-      imgLogo: '/images/logo/logoFeature1.png',
+      imgLogo: '/images/logo/logoFeature2.png',
       name: '  Finibus Bonorum',
       description:
         ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ',
@@ -105,6 +105,7 @@ const Introduction = () => {
                     // height: '35px',
                     padding: '0 1.625rem',
                     height: 'auto',
+                    borderRadius: '25px',
                     '& span': {
                       padding: '0.625rem 0',
                       fontSize: '1.375 rem',
@@ -173,12 +174,14 @@ const Introduction = () => {
           <Grid item>
             <Stack
               sx={{
-                margin: '40px 0 40px 0',
+                margin: '40px 0 0 0',
+                backgroundColor: '#F3F3F3',
+                padding: '40px 0 40px 0',
               }}
               alignItems={'center'}
             >
               <Box>
-                <Box sx={{ mb: '25px' }}>
+                <Box>
                   {/* <Button
                     sx={{
                       width: '129px',
@@ -211,7 +214,7 @@ const Introduction = () => {
                       },
                     }}
                     size="medium"
-                    label={'About us'}
+                    label={'Features'}
                   />
                 </Box>
               </Box>
@@ -238,34 +241,37 @@ const Introduction = () => {
                           padding: '20px 40px 60px 40px',
                           '&:hover': {
                             background: theme.palette.common.white,
-                            borderBottom: `10px solid  ${theme.palette.primary.main}`,
+                            // borderBottom: `10px solid  ${theme.palette.primary.main}`,
+                            boxShadow: 'inset 0 -5px 0 #4A00A9',
                           },
                         }}
                       >
-                        <Box
-                          sx={{
-                            mb: '40px',
-                          }}
-                        >
-                          <Image
-                            height={'134px'}
-                            width={'128px'}
-                            src={item.imgLogo}
-                          ></Image>
-                        </Box>
-                        <Box
-                          sx={{
-                            mb: '60px',
-                          }}
-                        >
-                          <Typography color={'black'} variant="h4">
-                            {item.name}
-                          </Typography>
-                        </Box>
                         <Box>
-                          <Typography color={'#515151'} variant="h5">
-                            {item.description}
-                          </Typography>
+                          <Box
+                            sx={{
+                              mb: '40px',
+                            }}
+                          >
+                            <Image
+                              height={'134px'}
+                              width={'128px'}
+                              src={item.imgLogo}
+                            ></Image>
+                          </Box>
+                          <Box
+                            sx={{
+                              mb: '60px',
+                            }}
+                          >
+                            <Typography color={'black'} variant="h4">
+                              {item.name}
+                            </Typography>
+                          </Box>
+                          <Box>
+                            <Typography color={'#515151'} variant="h5">
+                              {item.description}
+                            </Typography>
+                          </Box>
                         </Box>
                       </Stack>
                     </Grid>
@@ -287,23 +293,7 @@ const Introduction = () => {
                 alignItems={'center'}
               >
                 <Box>
-                  <Box sx={{ mb: '25px' }}>
-                    {/* <Button
-                      sx={{
-                        width: '129px',
-                        height: '27px',
-                        background: 'rgba(74, 0, 169, 0.27)',
-                        bordeRadius: '25px',
-                        color: 'rgba(74, 0, 169, 0.27)',
-                      }}
-                    >
-                      <Typography
-                        color={theme.palette.primary.main}
-                        variant="h6"
-                      >
-                        Teams
-                      </Typography>
-                    </Button> */}
+                  <Box>
                     <Chip
                       sx={{
                         backgroundColor: `${theme.palette.background.property}`,
@@ -314,6 +304,7 @@ const Introduction = () => {
                         // height: '35px',
                         padding: '0 1.625rem',
                         height: 'auto',
+                        borderRadius: '25px',
                         '& span': {
                           padding: '0.625rem 0',
                           fontSize: '1.375 rem',

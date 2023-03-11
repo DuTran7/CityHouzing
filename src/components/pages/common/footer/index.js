@@ -30,7 +30,7 @@ const Footer = ({ ...props }) => {
               },
               color: theme.palette.common.white,
               display: {
-                xs: 'none',
+                xs: 'flex',
                 md: 'flex',
               },
               cursor: 'pointer',
@@ -39,11 +39,15 @@ const Footer = ({ ...props }) => {
               sm: 'calc(100vw / 3)',
             }}
           >
-            <LinkLogo imageURL={'/images/logo/logo1.png'} />
+            <LinkLogo
+              width={'380x'}
+              height={'60px'}
+              imageURL={'/images/logo/logo1.jpg'}
+            />
           </Typography>
         </Box>
 
-        <Stack direction={'row'} spacing={12}>
+        <Stack sx={{ mr: '40px' }} direction={'row'} spacing={12}>
           <Typography color={theme.palette.common.white} variant="h4">
             CityHouzing© 2021
           </Typography>

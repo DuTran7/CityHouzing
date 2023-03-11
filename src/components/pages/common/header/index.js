@@ -16,6 +16,7 @@ import React, { useState, useEffect } from 'react';
 import { theme } from 'theme';
 import { styled } from '@mui/material';
 import { display } from '@mui/system';
+import Link from 'next/link';
 
 const ListItem = styled('div')(({ theme }) => ({
   '& .item': {
@@ -34,9 +35,24 @@ const ListItem = styled('div')(({ theme }) => ({
     },
 }));
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-const Items = ['Trang chủ', ' Giới Thiệu', '    Tin Tức'];
+const Items = [
+  {
+    name: 'Trang chủ',
+    linkTo: '/',
+  },
+  {
+    name: 'Giới Thiệu',
+    linkTo: '/introduction',
+  },
+  {
+    name: 'Dự Án',
+    linkTo: '/project',
+  },
+  {
+    name: 'Tin Tức',
+    linkTo: '/news',
+  },
+];
 
 const Header = ({ ...props }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -83,9 +99,9 @@ const Header = ({ ...props }) => {
             }}
           >
             <LinkLogo
-              height={'76px'}
-              width={'112px'}
-              imageURL={'/images/logo/logo.png'}
+              height={'130px'}
+              width={'162px'}
+              imageURL={'/images/logo/logo.jpg'}
             />
           </Typography>
 
@@ -127,14 +143,24 @@ const Header = ({ ...props }) => {
                       paddingBottom: '15x',
                       mr: '50px',
                       '&:hover': {
-                        borderBottom: '2px solid #4A00A9',
+                        // borderBottom: '2px solid #4A00A9',
+                        boxShadow: 'inset 0 -5px 0 #4A00A9',
                         color: ' #4A00A9',
                       },
                     }}
                     variant="h4"
                     className="item"
                   >
-                    {item}
+                    <Link
+                      sx={{
+                        '&:hover': {
+                          color: ' #4A00A9',
+                        },
+                      }}
+                      href={item.linkTo}
+                    >
+                      {item.name}
+                    </Link>
                   </Typography>
                 </MenuItem>
               ))}
@@ -159,7 +185,7 @@ const Header = ({ ...props }) => {
             <LinkLogo
               height={'76px'}
               width={'112px'}
-              imageURL={'/images/logo/logo.png'}
+              imageURL={'/images/logo/logo.jpg'}
             />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}></Box>
@@ -180,8 +206,10 @@ const Header = ({ ...props }) => {
                       cursor: 'pointer',
                       paddingBottom: '15x',
                       mr: '50px',
+                      pb: '15px',
                       '&:hover': {
-                        borderBottom: '2px solid #4A00A9',
+                        //borderBottom: '2px solid #4A00A9',
+                        boxShadow: 'inset 0 -5px 0 #4A00A9',
                         color: ' #4A00A9',
                       },
                     }}
@@ -189,7 +217,12 @@ const Header = ({ ...props }) => {
                     variant="h4"
                     className="item"
                   >
-                    {item}
+                    <Link
+                      sx={{ '& a:hover': { color: '#4A00A9 !important' } }}
+                      href={item.linkTo}
+                    >
+                      {item.name}
+                    </Link>
                   </Typography>
                 </>
               );
@@ -198,12 +231,16 @@ const Header = ({ ...props }) => {
             <Box>
               <Typography
                 sx={{
-                  color: theme.palette.common.black,
+                  color: theme.palette.primary.main,
                   cursor: 'pointer',
                   paddingBottom: '15x',
                   mr: '50px',
-                  background: ' #FFE70C',
-                  padding: '0 20px',
+                  background: '#FFE70C',
+                  padding: '0 40px',
+                  '&:hover': {
+                    background: theme.palette.common.white,
+                    color: '#FFE70C',
+                  },
                 }}
                 variant="h4"
                 className="item"
