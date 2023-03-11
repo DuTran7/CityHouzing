@@ -8,8 +8,8 @@ body {
   /* min-height: calc(100vh - 43px); */
   display: flex;
   flex-direction: column;
-  font-family: 'Red5 Helvetica', 'Palatino Linotype', 'Palatino LT STD',
-    'Book Antiqua', Georgia, serif;
+  font-family: Inter, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua',
+    Georgia, serif;
 }
 
 h1,
@@ -223,28 +223,28 @@ a:hover {
 .image-gallery-thumbnails-container {
   /* transform: none !important; */
 }
-/* @font-face {
-  font-family: 'Red5 Helvetica';
-  src: url('~/public/fonts/OTF/Red5-Helvetica Light.otf');
+@font-face {
+  font-family: 'Inter';
+  src: url('~/public/fonts/static/Inter-Regular.ttf');
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Red5 Helvetica Bold';
-  src: url('~/public/fonts/OTF/Red5-Helvetica Bold.otf');
+  font-family: 'Inter Bold';
+  src: url('~/public/fonts/static/Inter-Bold.ttf');
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Red5 Helvetica Heavy';
-  src: url('~/public/fonts/OTF/Red5-Helvetica Heavy.otf');
+  font-family: 'Inter Heavy';
+  src: url('~/public/fonts/static/Inter-SemiBold.ttf');
   font-style: normal;
 }
 @font-face {
-  font-family: 'Red5 Helvetica Light';
-  src: url('~/public/fonts/OTF/Red5-Helvetica Light.otf');
+  font-family: 'Inter Light';
+  src: url('~/public/fonts/static/Inter-Light.ttf');
   font-style: normal;
-} */
+}
 
 /* Scroll bar custom */
 ::-webkit-scrollbar {

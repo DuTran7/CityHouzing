@@ -45,6 +45,8 @@ function Property({
               marginBottom: '15px',
               fontSize: '22px',
               // height: '35px',
+              borderRadius: '43px',
+              padding: '0 8px',
             }}
             className={classes.chipBox}
             size="medium"

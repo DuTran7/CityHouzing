@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import Header from '../pages/common/header/index.js';
 import Footer from '../pages/common/footer/index';
-import { Stack } from '@mui/material';
+import { Container, Stack } from '@mui/material';
 
 const DefaultLayout = ({ children, showFooter = true, seo }) => {
   return (
@@ -13,33 +13,35 @@ const DefaultLayout = ({ children, showFooter = true, seo }) => {
         {/* <Head>
         <link rel="shortcut icon" href="/logo.jpg" />
       </Head> */}
-        <Box>
-          <Header></Header>
-        </Box>
-        <Box>
-          <Box
-            sx={
-              {
-                // overflowX: {
-                //   xs: 'hidden',
-                //   md: 'scroll',
-                // },
-                // overflowY: 'hidden',
-              }
-            }
-          >
-            {children}
+        <Container maxWidth="xl">
+          <Box>
+            <Header></Header>
           </Box>
-        </Box>
-        <Box>
-          {showFooter ? (
-            <>
-              <Footer></Footer>
-            </>
-          ) : (
-            <></>
-          )}
-        </Box>
+          <Box>
+            <Box
+              sx={
+                {
+                  // overflowX: {
+                  //   xs: 'hidden',
+                  //   md: 'scroll',
+                  // },
+                  // overflowY: 'hidden',
+                }
+              }
+            >
+              {children}
+            </Box>
+          </Box>
+          <Box>
+            {showFooter ? (
+              <>
+                <Footer></Footer>
+              </>
+            ) : (
+              <></>
+            )}
+          </Box>
+        </Container>
       </Stack>
     </>
   );
