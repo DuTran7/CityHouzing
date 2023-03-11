@@ -8,7 +8,7 @@ function HomeTopic() {
   return (
     <Box className={styles.container}>
       <Box className={styles['left-info']}>
-        <Box>
+        <Box className={styles[""]}>
           <Typography
             color={theme.palette.common.black}
             className={styles.title}

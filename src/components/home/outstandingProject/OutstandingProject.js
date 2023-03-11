@@ -1,8 +1,8 @@
 import { Box, Chip, Grid, Paper, Typography } from '@mui/material';
-import Property from 'components/shared/Property';
 import { StyledBtnContain } from 'components/ukit/Button';
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@mui/styles';
+import styles from 'components/home/outstandingProject/OutstandingProject.module.css';
 
 const useStyles = makeStyles({
   hoverElement: {
@@ -66,36 +66,10 @@ function OutstandingProject({ data }) {
         className={classes.hoverElement}
       >
         <Box
-          sx={{
-            boxSizing: 'border-box',
-            margin: '5rem',
-            width: '55%',
-            height: '58%',
-            padding: '3rem 0',
-            backgroundColor: 'rgba(0, 0, 0, 0.26)',
-            display: 'inline-flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            maxWidth: '55%',
-            maxHeight: '58%',
-            overflow: 'hidden',
-          }}
-          className="box-content"
+          className={styles['box-content']}
         >
           <Typography
-            style={{
-              fontSize: '1.375rem',
-              fontWeight: 600,
-              lineHeight: '1.625rem',
-              marginBottom: '1.563rem',
-              height: '3.2rem',
-              width: '100%',
-              textAlign: 'center',
-              // whiteSpace: 'nowrap',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-            }}
+            className={styles['box-content-name']}
           >
             {project.name}
           </Typography>
