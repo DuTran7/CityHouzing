@@ -29,8 +29,9 @@ export const theme = responsiveFontSizes(
       text: {
         primary: '#FFFFFF',
         secondary: '#999CA0',
-        title: '#4A00A9',
+        title: '#4A00A9', // purple
         subText: '#808080',
+        content: '#8B20BA',
       },
       divider: '#292929',
       link: {
@@ -39,6 +40,9 @@ export const theme = responsiveFontSizes(
       background: {
         topic: '#F3F3F3',
         property: '#CEBAE8',
+      },
+      borderBox: {
+        box: '#C1C1C1',
       },
     },
     // Config: TYPOGRAPHY

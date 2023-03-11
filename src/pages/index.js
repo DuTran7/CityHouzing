@@ -1,3 +1,4 @@
+import { Container } from '@mui/system';
 import DefaultLayout from 'components/layouts/DefaultLayout';
 import HomePage from 'components/pages/Home/HomePage';
 const seo = {
@@ -6,9 +7,11 @@ const seo = {
 };
 export default function Home({}) {
   return (
-    <DefaultLayout seo={seo}>
-      <HomePage />
-    </DefaultLayout>
+    // <Container maxWidth="xl">
+      <DefaultLayout seo={seo}>
+        <HomePage />
+      </DefaultLayout>
+    // </Container>
   );
 }
 

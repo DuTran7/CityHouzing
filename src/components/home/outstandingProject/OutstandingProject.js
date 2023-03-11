@@ -1,23 +1,20 @@
 import { Box, Chip, Grid, Paper, Typography } from '@mui/material';
 import Property from 'components/shared/Property';
 import { StyledBtnContain } from 'components/ukit/Button';
-import React, { useState } from 'react';
-import { theme } from 'theme';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   hoverElement: {
-    // backgroundColor: 'red !important',
+    height: '100%',
+    width: '100%',
     '&:hover': {
-      width: '100% !important',
-      height: '100% !important',
-      margin: '0 !important',
-
+      boxShadow: `rgba(0, 0, 0, 0.24) 0px 3px 8px`,
     },
   },
 });
 
-function OutstandingProject() {
+function OutstandingProject({ data }) {
   const [projects, setProjects] = useState([
     {
       main: true,
@@ -51,15 +48,93 @@ function OutstandingProject() {
     },
   ]);
 
+  useEffect(() => {
+    console.log('OutstandingProject', data);
+  }, []);
+
   const classes = useStyles();
+
+  const BoxContent = ({ project, index }) => {
+    return (
+      <Box
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        className={classes.hoverElement}
+      >
+        <Box
+          sx={{
+            boxSizing: 'border-box',
+            margin: '5rem',
+            width: '55%',
+            height: '58%',
+            padding: '3rem 0',
+            backgroundColor: 'rgba(0, 0, 0, 0.26)',
+            display: 'inline-flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            maxWidth: '55%',
+            maxHeight: '58%',
+            overflow: 'hidden',
+          }}
+          className="box-content"
+        >
+          <Typography
+            style={{
+              fontSize: '1.375rem',
+              fontWeight: 600,
+              lineHeight: '1.625rem',
+              marginBottom: '1.563rem',
+              height: '3.2rem',
+              width: '100%',
+              textAlign: 'center',
+              // whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            {project.name}
+          </Typography>
+          <Box sx={{ textAlign: 'center' }}>
+            <Typography
+              style={{
+                fontSize: '0.813rem',
+                fontWeight: 600,
+                lineHeight: '1rem',
+                marginBottom: '2.813rem',
+              }}
+            >
+              Great deal available
+            </Typography>
+            <StyledBtnContain
+              fontSize="1,25rem"
+              fontWeight="600"
+              lineheight="1,25rem"
+              sx={{
+                height: '1.688rem',
+                fontSize: '0.875',
+                lineheight: '1.5rem',
+              }}
+            >
+              View Details
+            </StyledBtnContain>
+          </Box>
+        </Box>
+      </Box>
+    );
+  };
 
   const ProjectList = () => {
     return (
       <Grid container spacing={5}>
-        {projects.map((project) => {
-          if (project.main) {
+        {projects.map((project, index) => {
+          if (index === 0) {
             return (
-              <Grid key={project.id} xl={8} md={12} sm={12} xs={12} item>
+              <Grid key={project.id} xl={8} lg={8} md={12} sm={12} xs={12} item>
                 <Box
                   style={{
                     backgroundImage: "url('/home/project.png')",
@@ -68,51 +143,15 @@ function OutstandingProject() {
                     backgroundRepeat: 'no-repeat',
                     width: '100%',
                     height: '100%',
-                    boxSizing: 'border-box',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: "rgb(250, 40, 38)"
                   }}
-                  
                 >
-                  <Box
-                    style={{
-                      display: 'inline-block',
-                      boxSizing: 'border-box',
-                      margin: '80px',
-                      padding: '45px 120px',
-                      textAlign: 'center',
-                      backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                    className={classes.hoverElement}
-                  >
-                    <Typography style={{ marginBottom: '30px' }} variant="h3">
-                      {project.name}
-                    </Typography>
-                    <Typography style={{ marginBottom: '30px' }} variant="h6">
-                      {project.description}
-                    </Typography>
-                    <StyledBtnContain
-                      fontSize="20px"
-                      fontWeight="600"
-                      lineheight="20px"
-                      style={{ height: 'auto' }}
-                    >
-                      View Details
-                    </StyledBtnContain>
-                  </Box>
+                  <BoxContent project={project} index={index}></BoxContent>
                 </Box>
               </Grid>
             );
           } else {
             return (
-              <Grid key={project.id} xl={4} md={6} sm={12} xs={12} item>
+              <Grid key={project.id} xl={4} md={6} lg={4} sm={12} xs={12} item>
                 <Box
                   style={{
                     backgroundImage: "url('/home/project.png')",
@@ -121,49 +160,18 @@ function OutstandingProject() {
                     backgroundRepeat: 'no-repeat',
                     width: '100%',
                     height: '100%',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'center',
                   }}
                 >
                   <Box
                     style={{
-                      display: 'inline-block',
-                      boxSizing: 'border-box',
-                      margin: '80px',
-                      padding: '45px',
-                      textAlign: 'center',
-                      backgroundColor: 'rgba(0, 0, 0, 0.4)',
                       display: 'flex',
-                      flexDirection: 'column',
+                      flexDirection: 'row',
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}
                     className={classes.hoverElement}
                   >
-                    <Typography
-                      style={{
-                        marginBottom: '30px',
-                        ':hover': {
-                          cursor: '#efefef',
-                        },
-                      }}
-                      variant="h3"
-                    >
-                      {project.name}
-                    </Typography>
-                    <Typography style={{ marginBottom: '30px' }} variant="h6">
-                      {project.description}
-                    </Typography>
-                    <StyledBtnContain
-                      fontSize="20px"
-                      fontWeight="600"
-                      lineheight="20px"
-                      style={{ height: 'auto' }}
-                    >
-                      View Details
-                    </StyledBtnContain>
+                    <BoxContent project={project} index={index}></BoxContent>
                   </Box>
                 </Box>
               </Grid>
