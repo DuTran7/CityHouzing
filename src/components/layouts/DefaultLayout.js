@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import Header from '../pages/common/header/index.js';
 import Footer from '../pages/common/footer/index';
-import { Stack } from '@mui/material';
+import { Container, Stack } from '@mui/material';
 
 const DefaultLayout = ({ children, showFooter = true, seo }) => {
   return (
@@ -28,7 +28,7 @@ const DefaultLayout = ({ children, showFooter = true, seo }) => {
               }
             }
           >
-            {children}
+            <Container maxWidth="xl">{children}</Container>
           </Box>
         </Box>
         <Box>
