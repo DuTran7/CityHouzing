@@ -56,20 +56,25 @@ function Achievement() {
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
-          margin: '0 3rem',
+          margin: '0 2rem',
         }}
       >
         <Box>
           <Typography
-            sx={{ textTransform: 'uppercase' }}
+            sx={{
+              textTransform: 'uppercase',
+              fontSize: '2.625rem',
+              fontWeight: 600,
+              lineHeight: '3.188rem',
+              marginBottom: '0.75rem',
+            }}
             // style={{ color: theme.palette.common.black }}
-            variant="h3"
           >
             Thành tựu
           </Typography>
           <Divider
             sx={{
-              width: '85%',
+              width: '81%',
               borderBottomWidth: 'medium',
               // height: '0.375rem',
               marginBottom: '0.3rem',
@@ -78,7 +83,7 @@ function Achievement() {
           />
           <Divider
             sx={{
-              width: '65%',
+              width: '44%',
               borderBottomWidth: 'medium',
               borderColor: theme.palette.primary.secondary,
             }}
@@ -101,7 +106,11 @@ function Achievement() {
         </Box>
       </Box>
       <Carousel
-        className={classes.carouselBox}
+        sx={{
+          overflow: 'visible',
+           top: '3rem'
+        }}
+        // className={classes.carouselBox}
         autoPlay={false}
         index={currentIndexCarousel}
         animation="fade"
@@ -117,11 +126,11 @@ function Achievement() {
           <Box className="box-carousel" sx={{}} key={i}>
             <Box sx={{ textAlign: 'center' }}>
               <img
-                style={{ marginRight: '5rem' }}
+                style={{ marginRight: '5rem', width: '520px' }}
                 alt="test"
                 src={item.img[0]}
               />
-              <img alt="test" src={item.img[1]} />
+              <img alt="test" src={item.img[1]} style={{ width: '520px' }} />
             </Box>
           </Box>
         ))}

@@ -5,6 +5,7 @@ import { theme } from 'theme';
 import { Box } from '@mui/material';
 import BreadCrumb from 'components/pages/common/breadcrumb/breadcrumb';
 import DefaultLayout from 'components/layouts/DefaultLayout';
+import Contact from 'components/forms/Contact';
 
 function News() {
   return (
@@ -15,6 +16,7 @@ function News() {
           padding={'40px 45px 60px 40px'}
           bodyComponent={ListNews}
         ></Property>
+        <Contact></Contact>
       </DefaultLayout>
     </Box>
   );

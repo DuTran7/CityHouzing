@@ -6,11 +6,12 @@ import { theme } from 'theme';
 function HomeTopic() {
   return (
     <Box
-      style={{
+      sx={{
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#F3F3F3',
+        height: '70vh',
       }}
     >
       <Box
@@ -83,7 +84,12 @@ function HomeTopic() {
       <img
         src="/home/home-topic.png"
         alt="Home Topic"
-        style={{ width: '50%' }}
+        style={{
+          width: '50%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center',
+        }}
       />
     </Box>
   );

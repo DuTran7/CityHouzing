@@ -19,8 +19,13 @@ function News({ news }) {
         <img alt={news.title} src={news.image} width={'100%'} />
         <Box style={{ padding: '8% 8% 0 8%' }}>
           <Typography
-            style={{ color: theme.palette.text.subText, marginBottom: '20px', fontWeight: 400 }}
-            variant="h6"
+            style={{
+              color: theme.palette.text.subText,
+              marginBottom: '1.25rem',
+              fontWeight: 100,
+              lineHeight: '1.438rem',
+              fontStyle: 'italic',
+            }}
           >
             {news.createdAt}
           </Typography>
@@ -28,21 +33,22 @@ function News({ news }) {
             style={{
               color: theme.palette.common.black,
               fontWeight: 600,
-              marginBottom: '20px',
-              fontSize: '32px',
+              marginBottom: '1.25rem',
+              fontSize: '2rem',
+              lineHeight: '2.438rem',
               lineBreak: 'anywhere',
             }}
-            variant="h4"
           >
             {news.title}
           </Typography>
           <Typography
             style={{
               color: theme.palette.common.black,
-              marginBottom: '20px',
+              fontWeight: '400',
+              marginBottom: '1.25',
+              lineHeight: '1.438rem',
               lineBreak: 'anywhere',
             }}
-            variant="h6"
           >
             {news.description}
           </Typography>
@@ -51,11 +57,13 @@ function News({ news }) {
       <Box style={{ padding: '8%' }}>
         <StyledBtnOutlined
           variant="outlined"
-          fontSize="24px"
+          fontSize="1.5rem"
           fontWeight="600"
-          lineheight="20px"
-          style={{
-            boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 2.6px',
+          lineheight="1.25rem"
+          sx={{
+            boxShadow: 'rgba(0, 0, 0, 0.15) 0 0.125rem 0.163rem',
+            fontWeight: '600',
+            lineHeight: '1.5rem',
           }}
         >
           Read

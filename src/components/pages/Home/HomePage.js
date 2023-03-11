@@ -13,6 +13,7 @@ import moment from 'moment';
 import BreadCrumb from '../common/breadcrumb/breadcrumb';
 import Image from 'next/image';
 import Achievement from 'components/home/achievements/Achievement';
+import Contact from 'components/forms/Contact';
 
 export default function H(props) {
   const router = useRouter();
@@ -126,6 +127,7 @@ export default function H(props) {
         data={news}
       ></Property>
       <Achievement></Achievement>
+      <Contact></Contact>
     </Box>
   );
 }

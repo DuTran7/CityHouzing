@@ -107,7 +107,7 @@ function ListNews({ data }) {
 
   const NewsList = ({ listNews }) => {
     return (
-      <Grid container spacing={2}>
+      <Grid container spacing={5}>
         {listNews.map((news) => {
           return (
             <Grid
