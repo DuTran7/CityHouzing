@@ -44,11 +44,8 @@ function Contact() {
   ];
   console.log('errors', errors);
   useEffect(() => {
-    setTimeout(() => {
-      debugger;
-    }, 5000);
+    
   }, []);
-  // .css-454srj-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline
 
   return (
     <Box
