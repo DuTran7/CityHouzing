@@ -24,60 +24,60 @@ export const theme = responsiveFontSizes(
       },
       action: {
         hover: 'linear-gradient(to Right, #D2FF7C, #c1b435)',
-        hoverButton: "#9748FE"
+        hoverButton: '#9748FE',
       },
       text: {
         primary: '#FFFFFF',
         secondary: '#999CA0',
-        title: "#4A00A9", // purple
-        subText: "#808080",
-        content: "#8B20BA",
+        title: '#4A00A9', // purple
+        subText: '#808080',
+        content: '#8B20BA',
       },
       divider: '#292929',
       link: {
         blue: '#0C66FF',
       },
       background: {
-        topic: "#F3F3F3",
-        property: "#CEBAE8",
+        topic: '#F3F3F3',
+        property: '#CEBAE8',
       },
       borderBox: {
-        box: "#C1C1C1",
-      }
+        box: '#C1C1C1',
+      },
     },
     // Config: TYPOGRAPHY
     typography: {
-      fontFamily: 'Red5 Helvetica',
+      fontFamily: 'Inter',
       h1: {
-        fontFamily: 'Red5 Helvetica Light',
+        fontFamily: 'Inter Light',
         fontWeight: 300,
         fontSize: '96px',
         lineHeight: 1,
         fontStyle: 'normal',
       },
       h2: {
-        fontFamily: 'Red5 Helvetica',
+        fontFamily: 'Inter',
         fontStyle: 'normal',
         fontWeight: 300,
         fontSize: '52px',
         lineHeight: 1.3,
       },
       h3: {
-        fontFamily: 'Red5 Helvetica',
+        fontFamily: 'Inter',
         fontWeight: 600,
         fontSize: '42px',
         lineHeight: 1.5,
         fontStyle: 'normal',
       },
       h4: {
-        fontFamily: 'Red5 Helvetica',
+        fontFamily: 'Inter',
         fontWeight: 600,
         fontSize: '32px',
         lineHeight: 1.5,
         fontStyle: 'normal',
       },
       h5: {
-        fontFamily: 'Red5 Helvetica Light',
+        fontFamily: 'Inter Light',
         fontWeight: 600,
         fontSize: '24px',
         lineHeight: 1,
@@ -96,13 +96,13 @@ export const theme = responsiveFontSizes(
         fontStyle: 'normal',
       },
       caption: {
-        fontFamily: 'Red5 Helvetica',
+        fontFamily: 'Inter',
         fontWeight: 400,
         fontSize: '18px',
         lineHeight: 1.55,
       },
       body1: {
-        fontFamily: 'Red5 Helvetica Light',
+        fontFamily: 'Inter Light',
         fontSize: '14px',
         fontWeight: 400,
         lineHeight: 1.7,
@@ -114,7 +114,7 @@ export const theme = responsiveFontSizes(
         lineHeight: 1.42,
       },
       subtitle1: {
-        fontFamily: 'Red5 Helvetica Light',
+        fontFamily: 'Inter Light',
         fontSize: '8px',
         fontWeight: 300,
         lineHeight: 2,
