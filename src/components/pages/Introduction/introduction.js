@@ -14,13 +14,17 @@ const Introduction = () => {
       >
         <BreadCrumb title={'Về Chúng Tôi'}></BreadCrumb>
         <Grid container spacing={2}>
-          <Grid item xs={6}>
+          <Grid item md={6} sm={12} xs={12}>
             <Box
               sx={{
                 display: 'flex',
                 justifyContent: 'flex-end',
                 mr: '50px',
                 padding: '20px 0 20px 0',
+                marginRight: {
+                  sm: '100px',
+                  xs: '100px',
+                },
               }}
             >
               <Image
@@ -30,14 +34,15 @@ const Introduction = () => {
               ></Image>
             </Box>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item md={6} sm={12} xs={12}>
             <Stack
-              padding={'100px 220px 130px 0'}
-              height={'770px'}
-              //   sx={{
-              //     height: '770px',
-              //     padding: '100px 0 130px 0',
-              //   }}
+              sx={{
+                padding: {
+                  md: '100px 220px 130px 0',
+                  sm: ' 0 20px 0 40px',
+                  xs: '0 20px 0 40px',
+                },
+              }}
             >
               <Box sx={{ mb: '25px' }}>
                 <Button
@@ -70,18 +75,15 @@ const Introduction = () => {
                 <Box
                   sx={{
                     boxSizing: ' border-box',
-                    width: '437px',
+                    width: '100%',
                     height: '112px',
                     background: 'rgba(74, 0, 169, 0.12)',
                     borderLeft: '4px solid #4A00A9',
                     mb: '45px',
+                    padding: '20px',
                   }}
                 >
-                  <Typography
-                    padding={'20px'}
-                    color={theme.palette.common.grey}
-                    variant="h7"
-                  >
+                  <Typography color={theme.palette.common.grey} variant="h7">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
                     aperiam, eaque ipsa quae ab illo inventore veritatis et
@@ -109,53 +111,53 @@ const Introduction = () => {
         </Grid>
 
         {/* feature section */}
-        <Stack
-          height={'707px'}
-          sx={{
-            background: '#F8F8F8',
-          }}
-        >
-          <Stack
-            sx={{
-              margin: '40px 0 40px 0',
-            }}
-            alignItems={'center'}
-          >
-            <Box>
-              <Box sx={{ mb: '25px' }}>
-                <Button
-                  sx={{
-                    width: '129px',
-                    height: '27px',
-                    background: 'rgba(74, 0, 169, 0.27)',
-                    bordeRadius: '25px',
-                    color: 'rgba(74, 0, 169, 0.27)',
-                  }}
-                >
-                  <Typography color={theme.palette.primary.main} variant="h6">
-                    Features
-                  </Typography>
-                </Button>
+        <Grid container>
+          <Grid item>
+            <Stack
+              sx={{
+                margin: '40px 0 40px 0',
+              }}
+              alignItems={'center'}
+            >
+              <Box>
+                <Box sx={{ mb: '25px' }}>
+                  <Button
+                    sx={{
+                      width: '129px',
+                      height: '27px',
+                      background: 'rgba(74, 0, 169, 0.27)',
+                      bordeRadius: '25px',
+                      color: 'rgba(74, 0, 169, 0.27)',
+                    }}
+                  >
+                    <Typography color={theme.palette.primary.main} variant="h6">
+                      Features
+                    </Typography>
+                  </Button>
+                </Box>
               </Box>
-            </Box>
-            <Box>
-              <Typography
-                variant="subtitle2"
-                color={theme.palette.primary.main}
-              >
-                Giá Trị Cốt Lõi
-              </Typography>
-            </Box>
-          </Stack>
-          <Box sx={{ margin: '0 40px 40px 40px' }}>
-            <Grid container>
-              <Grid item xs={4}>
+              <Box>
+                <Typography
+                  variant="subtitle2"
+                  color={theme.palette.primary.main}
+                >
+                  Giá Trị Cốt Lõi
+                </Typography>
+              </Box>
+            </Stack>
+
+            <Grid container sx={{ margin: '0 40px 40px 40px' }}>
+              <Grid item xs={12} md={4} sm={12}>
                 <Stack
                   sx={{
                     border: '1px solid rgba(193, 193, 193, 0.54)',
                     background: '#F9F9F9',
                     boxSizing: 'border-box',
                     padding: '20px 40px 60px 40px',
+                    '&:hover': {
+                      background: theme.palette.common.white,
+                      borderBottom: `10px solid  ${theme.palette.primary.main}`,
+                    },
                   }}
                 >
                   <Box
@@ -187,13 +189,18 @@ const Introduction = () => {
                   </Box>
                 </Stack>
               </Grid>
-              <Grid item xs={4}>
+
+              <Grid item xs={12} md={4} sm={12}>
                 <Stack
                   sx={{
                     border: '1px solid rgba(193, 193, 193, 0.54)',
                     background: '#F9F9F9',
                     boxSizing: 'border-box',
                     padding: '20px 40px 60px 40px',
+                    '&:hover': {
+                      background: theme.palette.common.white,
+                      borderBottom: `10px solid  ${theme.palette.primary.main}`,
+                    },
                   }}
                 >
                   <Box
@@ -225,13 +232,18 @@ const Introduction = () => {
                   </Box>
                 </Stack>
               </Grid>
-              <Grid item xs={4}>
+
+              <Grid item xs={12} md={4} sm={12}>
                 <Stack
                   sx={{
                     border: '1px solid rgba(193, 193, 193, 0.54)',
                     background: '#F9F9F9',
                     boxSizing: 'border-box',
                     padding: '20px 40px 60px 40px',
+                    '&:hover': {
+                      background: theme.palette.common.white,
+                      borderBottom: `10px solid  ${theme.palette.primary.main}`,
+                    },
                   }}
                 >
                   <Box
@@ -264,8 +276,8 @@ const Introduction = () => {
                 </Stack>
               </Grid>
             </Grid>
-          </Box>
-        </Stack>
+          </Grid>
+        </Grid>
 
         {/* teams section */}
         <Stack>
@@ -313,10 +325,17 @@ const Introduction = () => {
             <Grid container>
               <Grid
                 item
-                xs={4}
+                xs={12}
+                md={4}
+                sm={12}
                 sx={{
                   background: '#FFFFFF',
                   padding: ' 0 5px 0 0',
+                  '& :hover': {
+                    '& .nameMember': {
+                      color: ' #4A00A9 !important',
+                    },
+                  },
                 }}
               >
                 <Box sx={{ border: '1px solid #4A00A9' }}>
@@ -343,6 +362,7 @@ const Introduction = () => {
                     >
                       <Box sx={{ mb: '30px' }}>
                         <Typography
+                          className="nameMember"
                           color={theme.palette.common.black}
                           variant="h5"
                         >
@@ -351,7 +371,7 @@ const Introduction = () => {
                       </Box>
                       <Box sx={{ mb: '60px' }}>
                         <Typography
-                          color={theme.palette.common.black}
+                          color={theme.palette.primary.main}
                           variant="h6"
                         >
                           Real Estate Broker
@@ -363,10 +383,17 @@ const Introduction = () => {
               </Grid>
               <Grid
                 item
-                xs={4}
+                xs={12}
+                md={4}
+                sm={12}
                 sx={{
                   background: '#FFFFFF',
                   padding: ' 0 5px 0 0',
+                  '& :hover': {
+                    '& .nameMember': {
+                      color: ' #4A00A9 !important',
+                    },
+                  },
                 }}
               >
                 <Box sx={{ border: '1px solid #4A00A9' }}>
@@ -393,6 +420,7 @@ const Introduction = () => {
                     >
                       <Box sx={{ mb: '30px' }}>
                         <Typography
+                          className="nameMember"
                           color={theme.palette.common.black}
                           variant="h5"
                         >
@@ -401,7 +429,7 @@ const Introduction = () => {
                       </Box>
                       <Box sx={{ mb: '60px' }}>
                         <Typography
-                          color={theme.palette.common.black}
+                          color={theme.palette.primary.main}
                           variant="h6"
                         >
                           Real Estate Broker
@@ -413,10 +441,17 @@ const Introduction = () => {
               </Grid>
               <Grid
                 item
-                xs={4}
+                xs={12}
+                md={4}
+                sm={12}
                 sx={{
                   background: '#FFFFFF',
                   padding: ' 0 5px 0 0',
+                  '& :hover': {
+                    '& .nameMember': {
+                      color: ' #4A00A9 !important',
+                    },
+                  },
                 }}
               >
                 <Box sx={{ border: '1px solid #4A00A9' }}>
@@ -443,6 +478,7 @@ const Introduction = () => {
                     >
                       <Box sx={{ mb: '30px' }}>
                         <Typography
+                          className="nameMember"
                           color={theme.palette.common.black}
                           variant="h5"
                         >
@@ -451,7 +487,7 @@ const Introduction = () => {
                       </Box>
                       <Box sx={{ mb: '60px' }}>
                         <Typography
-                          color={theme.palette.common.black}
+                          color={theme.palette.primary.main}
                           variant="h6"
                         >
                           Real Estate Broker
@@ -464,153 +500,6 @@ const Introduction = () => {
             </Grid>
           </Box>
         </Stack>
-
-        {/* Project section */}
-        <Box sx={{ margin: '0 40px 40px 40px' }}>
-          <Grid container spacing={2}>
-            <Grid xl={4} md={12} sm={12} xs={12} item>
-              <Box
-                style={{
-                  backgroundImage: "url('/home/project.png')",
-                  backgroundPosition: 'center bottom',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  width: '100%',
-                  height: '395px',
-                  boxSizing: 'border-box',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgb(250, 40, 38)',
-                }}
-              >
-                <Box
-                  style={{
-                    display: 'inline-block',
-                    boxSizing: 'border-box',
-                    width: '100%',
-                    height: '155px',
-                    textAlign: 'start',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    justifyContent: 'center',
-                    paddingLeft: '25px',
-                  }}
-                >
-                  <Typography
-                    color={'#FFE70C'}
-                    style={{ marginBottom: '30px' }}
-                    variant="h7"
-                  >
-                    Bình Thạnh
-                  </Typography>
-                  <Typography
-                    color={theme.palette.common.white}
-                    style={{ marginBottom: '30px' }}
-                    variant="h5"
-                  >
-                    Xô Viết Nghệ Tĩnh Duplex
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid xl={4} md={12} sm={12} xs={12} item>
-              <Box
-                style={{
-                  backgroundImage: "url('/home/project.png')",
-                  backgroundPosition: 'center bottom',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  width: '100%',
-                  height: '395px',
-                  boxSizing: 'border-box',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgb(250, 40, 38)',
-                }}
-              >
-                <Box
-                  style={{
-                    display: 'inline-block',
-                    boxSizing: 'border-box',
-                    width: '100%',
-                    height: '155px',
-                    textAlign: 'start',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    justifyContent: 'center',
-                    paddingLeft: '25px',
-                  }}
-                >
-                  <Typography
-                    color={'#FFE70C'}
-                    style={{ marginBottom: '30px' }}
-                    variant="h7"
-                  >
-                    Bình Thạnh
-                  </Typography>
-                  <Typography
-                    color={theme.palette.common.white}
-                    style={{ marginBottom: '30px' }}
-                    variant="h5"
-                  >
-                    Xô Viết Nghệ Tĩnh Duplex
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid xl={4} md={12} sm={12} xs={12} item>
-              <Box
-                style={{
-                  backgroundImage: "url('/home/project.png')",
-                  backgroundPosition: 'center bottom',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  width: '100%',
-                  height: '395px',
-                  boxSizing: 'border-box',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgb(250, 40, 38)',
-                }}
-              >
-                <Box
-                  style={{
-                    display: 'inline-block',
-                    boxSizing: 'border-box',
-                    width: '100%',
-                    height: '155px',
-                    textAlign: 'start',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    justifyContent: 'center',
-                    paddingLeft: '25px',
-                  }}
-                >
-                  <Typography
-                    color={'#FFE70C'}
-                    style={{ marginBottom: '30px' }}
-                    variant="h7"
-                  >
-                    Bình Thạnh
-                  </Typography>
-                  <Typography
-                    color={theme.palette.common.white}
-                    style={{ marginBottom: '30px' }}
-                    variant="h5"
-                  >
-                    Xô Viết Nghệ Tĩnh Duplex
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
       </Box>
     </>
   );

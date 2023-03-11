@@ -23,8 +23,12 @@ const BreadCrumb = ({ title, ...props }) => {
             alignItems: 'flex-start',
           }}
         >
-          <Box sx={{ mb: '25x' }}>
-            <Typography variant="subtitle2" color={theme.palette.primary.main}>
+          <Box>
+            <Typography
+              sx={{ marginBottom: '20px' }}
+              variant="subtitle2"
+              color={theme.palette.primary.main}
+            >
               {title}
             </Typography>
           </Box>
@@ -53,16 +57,6 @@ const BreadCrumb = ({ title, ...props }) => {
           </Box>
         </Box>
       </Stack>
-      {/* <Box
-        sx={{
-          width: '100%',
-          display: 'flex',
-          alignItems: 'flex-start',
-          height: '225px',
-          flexDirection: 'column',
-        }}
-      >
-      </Box> */}
     </>
   );
 };
