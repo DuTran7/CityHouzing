@@ -1,4 +1,5 @@
 import { Box, Grid, Stack, Typography } from '@mui/material';
+import Contact from 'components/forms/Contact';
 import { theme } from 'theme';
 import BreadCrumb from '../common/breadcrumb/breadcrumb';
 
@@ -321,6 +322,8 @@ const Project = ({ ...props }) => {
           </Grid>
         </Grid>
       </Box>
+
+      <Contact></Contact>
     </>
   );
 };

@@ -118,8 +118,8 @@ const Header = ({ ...props }) => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {Items.map((item) => (
-                <MenuItem key={item} onClick={handleCloseNavMenu}>
+              {Items.map((item, idx) => (
+                <MenuItem key={idx} onClick={handleCloseNavMenu}>
                   <Typography
                     sx={{
                       color: theme.palette.common.black,
@@ -203,10 +203,7 @@ const Header = ({ ...props }) => {
                   paddingBottom: '15x',
                   mr: '50px',
                   background: ' #FFE70C',
-                  // '&:hover': {
-                  //   borderBottom: '2px solid #4A00A9',
-                  //   color: ' #4A00A9',
-                  // },
+                  padding: '0 20px',
                 }}
                 variant="h4"
                 className="item"

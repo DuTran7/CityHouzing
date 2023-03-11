@@ -1,10 +1,46 @@
-import { Box, Button, Grid, Stack, Typography } from '@mui/material';
+import { Box, Button, Chip, Grid, Stack, Typography } from '@mui/material';
 import { display } from '@mui/system';
+import Contact from 'components/forms/Contact';
 import Image from 'next/image';
 import { theme } from 'theme';
 import BreadCrumb from '../common/breadcrumb/breadcrumb';
 
 const Introduction = () => {
+  const teams = [
+    {
+      name: 'Rosalina D. William',
+      description: '  Real Estate Broker',
+    },
+    {
+      name: 'Rosalina D. William',
+      description: '  Real Estate Broker',
+    },
+    {
+      name: 'Rosalina D. William',
+      description: '  Real Estate Broker',
+    },
+  ];
+
+  const features = [
+    {
+      imgLogo: '/images/logo/logoFeature1.png',
+      name: '  Finibus Bonorum',
+      description:
+        ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ',
+    },
+    {
+      imgLogo: '/images/logo/logoFeature1.png',
+      name: '  Finibus Bonorum',
+      description:
+        ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ',
+    },
+    {
+      imgLogo: '/images/logo/logoFeature1.png',
+      name: '  Finibus Bonorum',
+      description:
+        ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ',
+    },
+  ];
   return (
     <>
       <Box
@@ -45,7 +81,7 @@ const Introduction = () => {
               }}
             >
               <Box sx={{ mb: '25px' }}>
-                <Button
+                {/* <Button
                   sx={{
                     width: '129px',
                     height: '27px',
@@ -57,7 +93,29 @@ const Introduction = () => {
                   <Typography color={theme.palette.primary.main} variant="h6">
                     About us
                   </Typography>
-                </Button>
+
+                </Button> */}
+                <Chip
+                  sx={{
+                    backgroundColor: `${theme.palette.background.property}`,
+                    color: theme.palette.text.title,
+                    overflow: 'unset',
+                    marginBottom: '15px',
+                    fontSize: '22px',
+                    // height: '35px',
+                    padding: '0 1.625rem',
+                    height: 'auto',
+                    '& span': {
+                      padding: '0.625rem 0',
+                      fontSize: '1.375 rem',
+                      lineHeight: '1.438rem',
+                      height: 'auto',
+                      fontWeight: 400,
+                    },
+                  }}
+                  size="medium"
+                  label={'About us'}
+                />
               </Box>
               <Box sx={{ mb: '25px' }}>
                 <Typography color={theme.palette.common.black} variant="h3">
@@ -111,7 +169,7 @@ const Introduction = () => {
         </Grid>
 
         {/* feature section */}
-        <Grid container>
+        <Grid container mb={'20px'}>
           <Grid item>
             <Stack
               sx={{
@@ -121,7 +179,7 @@ const Introduction = () => {
             >
               <Box>
                 <Box sx={{ mb: '25px' }}>
-                  <Button
+                  {/* <Button
                     sx={{
                       width: '129px',
                       height: '27px',
@@ -133,7 +191,28 @@ const Introduction = () => {
                     <Typography color={theme.palette.primary.main} variant="h6">
                       Features
                     </Typography>
-                  </Button>
+                  </Button> */}
+                  <Chip
+                    sx={{
+                      backgroundColor: `${theme.palette.background.property}`,
+                      color: theme.palette.text.title,
+                      overflow: 'unset',
+                      marginBottom: '15px',
+                      fontSize: '22px',
+                      // height: '35px',
+                      padding: '0 1.625rem',
+                      height: 'auto',
+                      '& span': {
+                        padding: '0.625rem 0',
+                        fontSize: '1.375 rem',
+                        lineHeight: '1.438rem',
+                        height: 'auto',
+                        fontWeight: 400,
+                      },
+                    }}
+                    size="medium"
+                    label={'About us'}
+                  />
                 </Box>
               </Box>
               <Box>
@@ -147,134 +226,52 @@ const Introduction = () => {
             </Stack>
 
             <Grid container sx={{ margin: '0 40px 40px 40px' }}>
-              <Grid item xs={12} md={4} sm={12}>
-                <Stack
-                  sx={{
-                    border: '1px solid rgba(193, 193, 193, 0.54)',
-                    background: '#F9F9F9',
-                    boxSizing: 'border-box',
-                    padding: '20px 40px 60px 40px',
-                    '&:hover': {
-                      background: theme.palette.common.white,
-                      borderBottom: `10px solid  ${theme.palette.primary.main}`,
-                    },
-                  }}
-                >
-                  <Box
-                    sx={{
-                      mb: '40px',
-                    }}
-                  >
-                    <Image
-                      height={'134px'}
-                      width={'128px'}
-                      src={'/images/logo/logoFeature1.png'}
-                    ></Image>
-                  </Box>
-                  <Box
-                    sx={{
-                      mb: '60px',
-                    }}
-                  >
-                    <Typography color={'black'} variant="h4">
-                      Finibus Bonorum
-                    </Typography>
-                  </Box>
-                  <Box>
-                    <Typography color={'#515151'} variant="h5">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua
-                    </Typography>
-                  </Box>
-                </Stack>
-              </Grid>
-
-              <Grid item xs={12} md={4} sm={12}>
-                <Stack
-                  sx={{
-                    border: '1px solid rgba(193, 193, 193, 0.54)',
-                    background: '#F9F9F9',
-                    boxSizing: 'border-box',
-                    padding: '20px 40px 60px 40px',
-                    '&:hover': {
-                      background: theme.palette.common.white,
-                      borderBottom: `10px solid  ${theme.palette.primary.main}`,
-                    },
-                  }}
-                >
-                  <Box
-                    sx={{
-                      mb: '40px',
-                    }}
-                  >
-                    <Image
-                      height={'134px'}
-                      width={'128px'}
-                      src={'/images/logo/logoFeature1.png'}
-                    ></Image>
-                  </Box>
-                  <Box
-                    sx={{
-                      mb: '60px',
-                    }}
-                  >
-                    <Typography color={'black'} variant="h4">
-                      Finibus Bonorum
-                    </Typography>
-                  </Box>
-                  <Box>
-                    <Typography color={'#515151'} variant="h5">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua
-                    </Typography>
-                  </Box>
-                </Stack>
-              </Grid>
-
-              <Grid item xs={12} md={4} sm={12}>
-                <Stack
-                  sx={{
-                    border: '1px solid rgba(193, 193, 193, 0.54)',
-                    background: '#F9F9F9',
-                    boxSizing: 'border-box',
-                    padding: '20px 40px 60px 40px',
-                    '&:hover': {
-                      background: theme.palette.common.white,
-                      borderBottom: `10px solid  ${theme.palette.primary.main}`,
-                    },
-                  }}
-                >
-                  <Box
-                    sx={{
-                      mb: '40px',
-                    }}
-                  >
-                    <Image
-                      height={'134px'}
-                      width={'128px'}
-                      src={'/images/logo/logoFeature1.png'}
-                    ></Image>
-                  </Box>
-                  <Box
-                    sx={{
-                      mb: '60px',
-                    }}
-                  >
-                    <Typography color={'black'} variant="h4">
-                      Finibus Bonorum
-                    </Typography>
-                  </Box>
-                  <Box>
-                    <Typography color={'#515151'} variant="h5">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua
-                    </Typography>
-                  </Box>
-                </Stack>
-              </Grid>
+              {(features || []).map((item, idx) => {
+                return (
+                  <>
+                    <Grid key={idx} item xs={12} md={4} sm={12}>
+                      <Stack
+                        sx={{
+                          border: '1px solid rgba(193, 193, 193, 0.54)',
+                          background: '#F9F9F9',
+                          boxSizing: 'border-box',
+                          padding: '20px 40px 60px 40px',
+                          '&:hover': {
+                            background: theme.palette.common.white,
+                            borderBottom: `10px solid  ${theme.palette.primary.main}`,
+                          },
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            mb: '40px',
+                          }}
+                        >
+                          <Image
+                            height={'134px'}
+                            width={'128px'}
+                            src={item.imgLogo}
+                          ></Image>
+                        </Box>
+                        <Box
+                          sx={{
+                            mb: '60px',
+                          }}
+                        >
+                          <Typography color={'black'} variant="h4">
+                            {item.name}
+                          </Typography>
+                        </Box>
+                        <Box>
+                          <Typography color={'#515151'} variant="h5">
+                            {item.description}
+                          </Typography>
+                        </Box>
+                      </Stack>
+                    </Grid>
+                  </>
+                );
+              })}
             </Grid>
           </Grid>
         </Grid>
@@ -291,7 +288,7 @@ const Introduction = () => {
               >
                 <Box>
                   <Box sx={{ mb: '25px' }}>
-                    <Button
+                    {/* <Button
                       sx={{
                         width: '129px',
                         height: '27px',
@@ -306,7 +303,28 @@ const Introduction = () => {
                       >
                         Teams
                       </Typography>
-                    </Button>
+                    </Button> */}
+                    <Chip
+                      sx={{
+                        backgroundColor: `${theme.palette.background.property}`,
+                        color: theme.palette.text.title,
+                        overflow: 'unset',
+                        marginBottom: '15px',
+                        fontSize: '22px',
+                        // height: '35px',
+                        padding: '0 1.625rem',
+                        height: 'auto',
+                        '& span': {
+                          padding: '0.625rem 0',
+                          fontSize: '1.375 rem',
+                          lineHeight: '1.438rem',
+                          height: 'auto',
+                          fontWeight: 400,
+                        },
+                      }}
+                      size="medium"
+                      label={'Teams'}
+                    />
                   </Box>
                 </Box>
                 <Box>
@@ -323,183 +341,81 @@ const Introduction = () => {
 
           <Box sx={{ margin: '0 40px 40px 40px' }}>
             <Grid container>
-              <Grid
-                item
-                xs={12}
-                md={4}
-                sm={12}
-                sx={{
-                  background: '#FFFFFF',
-                  padding: ' 0 5px 0 0',
-                  '& :hover': {
-                    '& .nameMember': {
-                      color: ' #4A00A9 !important',
-                    },
-                  },
-                }}
-              >
-                <Box sx={{ border: '1px solid #4A00A9' }}>
-                  <Box
-                    sx={{
-                      width: '100%',
-                      height: '426px',
-                      backgroundImage:
-                        "url('/images/placeHolderImage/avataTeam1.png')",
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  ></Box>
-                  <Stack>
-                    <Box
+              {teams.map((item, idx) => {
+                return (
+                  <>
+                    <Grid
+                      key={idx}
+                      item
+                      xs={12}
+                      md={4}
+                      sm={12}
                       sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexDirection: 'column',
-                        marginTop: '30px',
+                        background: '#FFFFFF',
+                        padding: ' 0 5px 0 0',
+                        '& :hover': {
+                          '& .nameMember': {
+                            color: ' #4A00A9 !important',
+                            textShadow: ' 0px 4px 4px rgba(0, 0, 0, 0.25)',
+                          },
+                        },
                       }}
                     >
-                      <Box sx={{ mb: '30px' }}>
-                        <Typography
-                          className="nameMember"
-                          color={theme.palette.common.black}
-                          variant="h5"
-                        >
-                          Rosalina D. William
-                        </Typography>
+                      <Box sx={{ border: '1px solid #4A00A9' }}>
+                        <Box
+                          sx={{
+                            width: '100%',
+                            height: '426px',
+                            backgroundImage:
+                              "url('/images/placeHolderImage/avataTeam1.png')",
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                          }}
+                        ></Box>
+                        <Stack>
+                          <Box
+                            sx={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              flexDirection: 'column',
+                              marginTop: '30px',
+                            }}
+                          >
+                            <Box sx={{ mb: '30px' }}>
+                              <Typography
+                                className="nameMember"
+                                color={theme.palette.common.black}
+                                variant="h5"
+                              >
+                                {item.name}
+                              </Typography>
+                            </Box>
+                            <Box sx={{ mb: '60px' }}>
+                              <Typography
+                                color={theme.palette.primary.main}
+                                variant="h6"
+                                sx={{
+                                  textShadow:
+                                    ' 0px 4px 4px rgba(0, 0, 0, 0.25)',
+                                }}
+                              >
+                                {item.description}
+                              </Typography>
+                            </Box>
+                          </Box>
+                        </Stack>
                       </Box>
-                      <Box sx={{ mb: '60px' }}>
-                        <Typography
-                          color={theme.palette.primary.main}
-                          variant="h6"
-                        >
-                          Real Estate Broker
-                        </Typography>
-                      </Box>
-                    </Box>
-                  </Stack>
-                </Box>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={4}
-                sm={12}
-                sx={{
-                  background: '#FFFFFF',
-                  padding: ' 0 5px 0 0',
-                  '& :hover': {
-                    '& .nameMember': {
-                      color: ' #4A00A9 !important',
-                    },
-                  },
-                }}
-              >
-                <Box sx={{ border: '1px solid #4A00A9' }}>
-                  <Box
-                    sx={{
-                      width: '100%',
-                      height: '426px',
-                      backgroundImage:
-                        "url('/images/placeHolderImage/avataTeam1.png')",
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  ></Box>
-                  <Stack>
-                    <Box
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexDirection: 'column',
-                        marginTop: '30px',
-                      }}
-                    >
-                      <Box sx={{ mb: '30px' }}>
-                        <Typography
-                          className="nameMember"
-                          color={theme.palette.common.black}
-                          variant="h5"
-                        >
-                          Rosalina D. William
-                        </Typography>
-                      </Box>
-                      <Box sx={{ mb: '60px' }}>
-                        <Typography
-                          color={theme.palette.primary.main}
-                          variant="h6"
-                        >
-                          Real Estate Broker
-                        </Typography>
-                      </Box>
-                    </Box>
-                  </Stack>
-                </Box>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={4}
-                sm={12}
-                sx={{
-                  background: '#FFFFFF',
-                  padding: ' 0 5px 0 0',
-                  '& :hover': {
-                    '& .nameMember': {
-                      color: ' #4A00A9 !important',
-                    },
-                  },
-                }}
-              >
-                <Box sx={{ border: '1px solid #4A00A9' }}>
-                  <Box
-                    sx={{
-                      width: '100%',
-                      height: '426px',
-                      backgroundImage:
-                        "url('/images/placeHolderImage/avataTeam1.png')",
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  ></Box>
-                  <Stack>
-                    <Box
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexDirection: 'column',
-                        marginTop: '30px',
-                      }}
-                    >
-                      <Box sx={{ mb: '30px' }}>
-                        <Typography
-                          className="nameMember"
-                          color={theme.palette.common.black}
-                          variant="h5"
-                        >
-                          Rosalina D. William
-                        </Typography>
-                      </Box>
-                      <Box sx={{ mb: '60px' }}>
-                        <Typography
-                          color={theme.palette.primary.main}
-                          variant="h6"
-                        >
-                          Real Estate Broker
-                        </Typography>
-                      </Box>
-                    </Box>
-                  </Stack>
-                </Box>
-              </Grid>
+                    </Grid>
+                  </>
+                );
+              })}
             </Grid>
           </Box>
         </Stack>
+
+        <Contact></Contact>
       </Box>
     </>
   );

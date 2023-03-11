@@ -53,7 +53,7 @@ function Contact() {
   return (
     <Box
       sx={{
-        margin: '12.5rem 2rem 2rem 2rem',
+        margin: '20px 2rem 2rem 2rem',
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
