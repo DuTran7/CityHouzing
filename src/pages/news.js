@@ -11,7 +11,7 @@ function News() {
   return (
     <Box>
       <DefaultLayout>
-        <BreadCrumb title={'Tin Tức'}></BreadCrumb>
+        <BreadCrumb listItem={'Tin Tức'} title={'Tin Tức'}></BreadCrumb>
         <Property
           padding={'40px 45px 60px 40px'}
           bodyComponent={ListNews}
