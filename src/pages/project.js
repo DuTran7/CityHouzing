@@ -3,8 +3,7 @@ import Project from 'components/pages/project/project';
 import { useEffect, useState } from 'react';
 
 const seo = {
-  title: 'About - Red5',
-  description: `Our definition of a beautiful design emphasizes on the relationship between human and space, activities and environment rather than meaningless decoration in order to deliver clients true experiences of happiness via their interactions with the spaces.`,
+  title: 'About - City Houzing',
 };
 export default function Projection({ isMobile }) {
   const [position, setPosition] = useState();

@@ -2,15 +2,15 @@ import { Container } from '@mui/system';
 import DefaultLayout from 'components/layouts/DefaultLayout';
 import HomePage from 'components/pages/Home/HomePage';
 const seo = {
-  title: 'Home - Red5',
-  description: `Red5studio is an Interior design firm based in Saigon, which specializes in residential, apartment, retail, hospitality, and commercial practices. We provide a full-service that starts from the concept development to the final construction. Red5studio was founded by Interior Designer Lai Chinh Truc`,
+  title: 'Home - City Houzing',
+  description: `City Houzing - nền tảng kết nối chủ nhà cho thuê và người đi thuê tại Tp. City Houzing đang hỗ trợ kết nối với hàng trăm chủ nhà và hàng nghìn căn hộ cho thuê`,
 };
 export default function Home({}) {
   return (
     // <Container maxWidth="xl">
-      <DefaultLayout seo={seo}>
-        <HomePage />
-      </DefaultLayout>
+    <DefaultLayout seo={seo}>
+      <HomePage />
+    </DefaultLayout>
     // </Container>
   );
 }
