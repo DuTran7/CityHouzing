@@ -92,6 +92,7 @@ function OutstandingProject({ data }) {
                 height: '1.688rem',
                 fontSize: '0.875',
                 lineheight: '1.5rem',
+                width: "100%"
               }}
             >
               View Details
@@ -157,7 +158,7 @@ function OutstandingProject({ data }) {
   };
 
   return (
-    <Box style={{ margin: '35px' }}>
+    <Box className={styles['container']}>
       <ProjectList></ProjectList>
     </Box>
   );

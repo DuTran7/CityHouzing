@@ -1,3 +1,7 @@
+.container {
+  margin: 0 1rem;
+}
+
 .box-content {
   box-sizing: border-box;
   margin: 5rem;
@@ -21,6 +25,15 @@
   /* // whiteSpace: nowrap; */
   /* overflow: hidden; */
   text-overflow: ellipsis;
+}
+@media only screen and (max-width: 767px) {
+  .box-content {
+    width: 75%;
+    margin: 5rem 2.5rem;
+  }
+  .box-content-name {
+    height: auto;
+  }
 }
 @media only screen and (max-width: 767px) {
   .box-content {

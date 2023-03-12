@@ -8,7 +8,7 @@ function HomeTopic() {
   return (
     <Box className={styles.container}>
       <Box className={styles['left-info']}>
-        <Box className={styles[""]}>
+        <Box className={styles['left-info-content']}>
           <Typography
             color={theme.palette.common.black}
             className={styles.title}
@@ -44,7 +44,10 @@ function HomeTopic() {
               fontSize="20px"
               fontWeight="600"
               lineheight="20px"
-              className={styles['button-bottom']}
+              className={[
+                styles['button-bottom'],
+                styles['button-bottom-right'],
+              ].join(' ')}
             >
               About Me
             </StyledBtnOutlined>

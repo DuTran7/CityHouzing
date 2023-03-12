@@ -115,13 +115,13 @@ export default function H(props) {
       <Property
         title="Dự án nổi bật"
         chipContent="Property"
-        padding="100px 0 190px 0"
+        padding="6.25rem 0 2.5rem 0"
         bodyComponent={OutstandingProject}
       />
       <Property
         title="Tin tức mới nhất"
         chipContent={'Property'}
-        padding={'40px 45px 60px 40px'}
+        padding={'2.5rem 1rem'}
         bodyComponent={ListNews}
         backgroundColor={theme.palette.background.topic}
         data={news}
