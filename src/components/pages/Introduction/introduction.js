@@ -215,7 +215,13 @@ const Introduction = () => {
               </Box>
             </Stack>
 
-            <Grid container>
+            <Grid
+              container
+              sx={{
+                padding: '0 40px 40px 0',
+                backgroundColor: '#F3F3F3',
+              }}
+            >
               {(features || []).map((item, idx) => {
                 return (
                   <>

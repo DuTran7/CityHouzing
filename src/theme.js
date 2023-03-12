@@ -18,7 +18,6 @@ export const theme = responsiveFontSizes(
         black: '#000000',
         grey: '#808080',
         custom: 'linear-gradient(to Right, #D2FF7C, #FFEE48)',
-        grey: '#292929',
         blue: '#3362FF',
         darkBlack: '#010101',
       },
