@@ -3,7 +3,7 @@ import DefaultLayout from 'components/layouts/DefaultLayout';
 import HomePage from 'components/pages/Home/HomePage';
 const seo = {
   title: 'Home - City Houzing',
-  description: `Best of real estate`,
+  description: `City Houzing - nền tảng kết nối chủ nhà cho thuê và người đi thuê tại Tp. City Houzing đang hỗ trợ kết nối với hàng trăm chủ nhà và hàng nghìn căn hộ cho thuê`,
 };
 export default function Home({}) {
   return (
