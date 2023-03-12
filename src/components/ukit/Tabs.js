@@ -57,7 +57,7 @@ export const StyledTabs = styled(Tabs)(({}) => ({
     alignItems: 'center',
     fontWeight: 300,
     lineHeight: 1.6,
-    fontFamily: 'Red5 Helvetica',
+    fontFamily: 'Inter',
     transform: 'rotate(90deg)',
     margin: '24px 0 0',
     '&.Mui-selected': {
@@ -103,7 +103,7 @@ export const StyledTabsHorizontal = styled(Tabs)(({}) => ({
     alignItems: 'center',
     fontWeight: 300,
     lineHeight: 2,
-    fontFamily: 'Red5 Helvetica',
+    fontFamily: 'Inter',
     '&.Mui-selected': {
       color: theme.palette.primary.main,
       borderBottomWidth: '2px',
