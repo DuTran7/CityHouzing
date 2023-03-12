@@ -217,37 +217,35 @@ const Header = ({ ...props }) => {
           >
             {Items.map((item, index) => {
               return (
-                <>
-                  <Typography
-                    sx={{
-                      color:
-                        active === item.name.toLowerCase()
-                          ? theme.palette.primary.main
-                          : theme.palette.common.black,
-                      cursor: 'pointer',
-                      boxShadow:
-                        active === item.name.toLowerCase()
-                          ? 'inset 0 -5px 0 #4A00A9'
-                          : '',
-                      paddingBottom: '15x',
-                      mr: '50px',
-                      pb: '15px',
-                      '&:hover': {
-                        '& a': {
-                          color: ' #4A00A9 !important',
-                        },
-                        //borderBottom: '2px solid #4A00A9',
-                        boxShadow: 'inset 0 -5px 0 #4A00A9',
-                        color: ' #4A00A9',
+                <Typography
+                  key={index}
+                  sx={{
+                    color:
+                      active === item.name.toLowerCase()
+                        ? theme.palette.primary.main
+                        : theme.palette.common.black,
+                    cursor: 'pointer',
+                    boxShadow:
+                      active === item.name.toLowerCase()
+                        ? 'inset 0 -5px 0 #4A00A9'
+                        : '',
+                    paddingBottom: '15x',
+                    mr: '50px',
+                    pb: '15px',
+                    '&:hover': {
+                      '& a': {
+                        color: ' #4A00A9 !important',
                       },
-                    }}
-                    key={index}
-                    variant="h4"
-                    className="item"
-                  >
-                    <Link href={item.linkTo}>{item.name}</Link>
-                  </Typography>
-                </>
+                      //borderBottom: '2px solid #4A00A9',
+                      boxShadow: 'inset 0 -5px 0 #4A00A9',
+                      color: ' #4A00A9',
+                    },
+                  }}
+                  variant="h4"
+                  className="item"
+                >
+                  <Link href={item.linkTo}>{item.name}</Link>
+                </Typography>
               );
             })}
 
