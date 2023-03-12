@@ -1,45 +1,65 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { Button, Box, Typography, Divider } from '@mui/material';
 import { theme } from 'theme';
 import { useStyles } from './styles';
+import styles from './achivement.module.css';
 
 function Achievement() {
   const classes = useStyles();
   const [currentIndexCarousel, setCurrentIndexCarousel] = useState(1);
-  const [first, setfirst] = useState([
-    {
-      img: ['/home/news.png', '/home/news-2nd.png'],
-    },
-    {
-      img: ['/home/news-2nd.png', '/home/news.png'],
-    },
+  const [windowWidth, setWindowWidth] = useState(null);
+  const [listImages, setListImage] = useState([
+    ['/home/news.png'],
+    ['/home/news-2nd.png'],
+    ['/home/news.png'],
+    ['/home/news-2nd.png'],
   ]);
 
   const handleClick = (operator) => {
-    console.log('click', currentIndexCarousel);
     switch (operator) {
       case 'next':
-        if (currentIndexCarousel >= first.length - 1) {
-          console.log('>=');
+        if (currentIndexCarousel >= listImages.length - 1) {
           setCurrentIndexCarousel(0);
         } else {
-          console.log('else');
           setCurrentIndexCarousel(currentIndexCarousel + 1);
         }
         break;
 
       default:
         if (currentIndexCarousel <= 0) {
-          console.log('>=');
-          setCurrentIndexCarousel(first.length - 1);
+          setCurrentIndexCarousel(listImages.length - 1);
         } else {
-          console.log('else');
           setCurrentIndexCarousel(currentIndexCarousel - 1);
         }
     }
-    console.log('click', currentIndexCarousel);
   };
+
+  function handleWindowSizeChange() {
+    setWindowWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
+  }, []);
+  useEffect(() => {
+    const newListImages = [];
+    if (windowWidth < 1339) {
+      listImages.flat(Infinity).forEach((image) => {
+        newListImages.push([image]);
+      });
+    } else {
+      listImages.flat(Infinity).forEach((image, index) => {
+        if (index % 2) {
+          newListImages.push([listImages[index - 1], image]);
+        }
+      });
+    }
+    setListImage(newListImages);
+  }, [windowWidth]);
 
   return (
     <Box
@@ -51,15 +71,8 @@ function Achievement() {
         marginBottom: '50px',
       }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          margin: '0 2rem',
-        }}
-      >
-        <Box>
+      <Box className={styles['header-carousel']}>
+        <Box className={styles['header-carousel-left']}>
           <Typography
             sx={{
               textTransform: 'uppercase',
@@ -68,7 +81,6 @@ function Achievement() {
               lineHeight: '3.188rem',
               marginBottom: '0.75rem',
             }}
-            // style={{ color: theme.palette.common.black }}
           >
             Thành tựu
           </Typography>
@@ -108,29 +120,25 @@ function Achievement() {
       <Carousel
         sx={{
           overflow: 'visible',
-           top: '3rem'
+          top: '3rem',
         }}
-        // className={classes.carouselBox}
         autoPlay={false}
         index={currentIndexCarousel}
         animation="fade"
         indicators={false}
-        next={() => {
-          console.log('next');
-        }}
-        prev={() => {
-          console.log('prev');
-        }}
       >
-        {first.map((item, i) => (
+        {listImages.map((images, i) => (
           <Box className="box-carousel" sx={{}} key={i}>
             <Box sx={{ textAlign: 'center' }}>
-              <img
-                style={{ marginRight: '5rem', width: '520px' }}
-                alt="test"
-                src={item.img[0]}
-              />
-              <img alt="test" src={item.img[1]} style={{ width: '520px' }} />
+              {images.map((image) => (
+                <img
+                  key={Math.ceil(Math.random() * 99999999999)}
+                  style={{ marginRight: '5rem', width: '520px' }}
+                  alt="Achivement"
+                  src={image}
+                  className={styles['achivement-image']}
+                />
+              ))}
             </Box>
           </Box>
         ))}
