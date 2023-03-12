@@ -13,7 +13,13 @@ const BreadCrumb = ({ title, listItem, ...props }) => {
           height: '225px',
         }}
       >
-        <Container marginLeft={'0'} height={'inherit'} maxWidth={'xl'}>
+        <Container
+          sx={{
+            height: 'inherit !important',
+            marginLeft: '0',
+          }}
+          maxWidth={'xl'}
+        >
           <Box
             sx={{
               height: '100%',
@@ -56,7 +62,7 @@ const BreadCrumb = ({ title, listItem, ...props }) => {
                   color="inherit"
                   href="/material-ui/getting-started/installation/"
                 >
-                  Giới Thiệu
+                  {listItem}
                 </Link>
               </Breadcrumbs>
             </Box>

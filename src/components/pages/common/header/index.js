@@ -77,8 +77,6 @@ const Header = ({ ...props }) => {
   };
 
   useEffect(() => {
-    console.log('============route name', router.pathname.slice(1));
-    //setActive(router.pathname.slice(1));
     switch (router.pathname.slice(1)) {
       case 'introduction':
         return setActive('giới thiệu');

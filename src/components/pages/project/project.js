@@ -65,7 +65,7 @@ const Project = ({ ...props }) => {
   ];
   return (
     <>
-      <BreadCrumb title={'Về Chúng Tôi'}></BreadCrumb>
+      <BreadCrumb listItem={'Dự Án'} title={'Về Chúng Tôi'}></BreadCrumb>
       {/* Project section */}
       <Box sx={{ margin: '0 40px 40px 40px' }}>
         <Grid container spacing={4}>
