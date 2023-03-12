@@ -55,11 +55,10 @@ const Introduction = () => {
               sx={{
                 display: 'flex',
                 justifyContent: 'flex-end',
-                mr: '50px',
                 padding: '20px 0 20px 0',
                 marginRight: {
                   sm: '100px',
-                  xs: '100px',
+                  xs: '5px',
                 },
               }}
             >
@@ -97,6 +96,11 @@ const Introduction = () => {
                 </Button> */}
                 <Chip
                   sx={{
+                    marginLeft: {
+                      xs: '20%',
+                      md: '0px',
+                      lg: '0px',
+                    },
                     backgroundColor: `${theme.palette.background.property}`,
                     color: theme.palette.text.title,
                     overflow: 'unset',
@@ -150,7 +154,16 @@ const Introduction = () => {
                   </Typography>
                 </Box>
               </Box>
-              <Box>
+              <Box
+                sx={{
+                  ml: {
+                    xs: '20%',
+                    sm: '20%',
+                    lg: '0',
+                    md: '0',
+                  },
+                }}
+              >
                 <Button
                   sx={{
                     background: ' #FFE70C',
@@ -189,6 +202,7 @@ const Introduction = () => {
                       overflow: 'unset',
                       marginBottom: '15px',
                       fontSize: '22px',
+                      borderRadius: '26px',
                       // height: '35px',
                       padding: '0 1.625rem',
                       height: 'auto',
@@ -218,7 +232,7 @@ const Introduction = () => {
             <Grid
               container
               sx={{
-                padding: '0 40px 40px 0',
+                padding: '0 40px 40px 40px',
                 backgroundColor: '#F3F3F3',
               }}
             >

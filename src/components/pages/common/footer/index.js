@@ -20,19 +20,36 @@ const Footer = ({ ...props }) => {
         <Stack
           sx={{
             backgroundColor: theme.palette.primary.main,
-            height: '140px',
+            height: {
+              md: '140px',
+              xs: 'auto',
+            },
           }}
           direction={{ xs: 'column', md: 'row' }}
           alignItems={'center'}
           justifyContent={'space-between'}
         >
-          <Box>
+          <Box
+            sx={{
+              mt: {
+                md: '0',
+                xs: '10px',
+              },
+              ml: {
+                md: '0',
+                xs: '55px',
+              },
+            }}
+          >
             <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{
-                mr: '92px',
+                mr: {
+                  md: '92px',
+                  xs: '70px',
+                },
                 ml: {
                   xs: '20px',
                   md: '40px',
@@ -57,22 +74,43 @@ const Footer = ({ ...props }) => {
           </Box>
 
           <Stack sx={{ mr: '40px' }} direction={'row'} spacing={12}>
-            <Typography color={theme.palette.common.white} variant="h4">
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: '16px',
+                  md: '32px',
+                },
+              }}
+              color={theme.palette.common.white}
+              variant="h4"
+            >
               CityHouzing© 2021
             </Typography>
             <FacebookIcon
               sx={{
                 marginLeft: '0 !important',
-                height: '60px',
-                width: '50px',
+                height: {
+                  md: '60px',
+                  xs: '24px',
+                },
+                width: {
+                  md: '50px',
+                  xs: '30px',
+                },
                 color: theme.palette.common.white,
               }}
             ></FacebookIcon>
             <YouTubeIcon
               sx={{
                 marginLeft: '0 !important',
-                height: '60px',
-                width: '50px',
+                height: {
+                  md: '60px',
+                  xs: '24px',
+                },
+                width: {
+                  md: '50px',
+                  xs: '30px',
+                },
                 color: theme.palette.common.white,
               }}
             ></YouTubeIcon>

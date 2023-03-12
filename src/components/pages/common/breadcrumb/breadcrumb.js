@@ -25,7 +25,10 @@ const BreadCrumb = ({ title, listItem, ...props }) => {
               height: '100%',
               display: 'flex',
               flexDirection: 'column',
-              marginLeft: '110px',
+              marginLeft: {
+                md: '110px',
+                xs: '20px',
+              },
               justifyContent: 'center',
               alignItems: 'flex-start',
             }}

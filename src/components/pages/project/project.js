@@ -75,8 +75,8 @@ const Project = ({ ...props }) => {
                 <Grid
                   key={idx}
                   xl={4}
-                  md={12}
-                  sm={12}
+                  md={6}
+                  sm={6}
                   xs={12}
                   item
                   sx={{
