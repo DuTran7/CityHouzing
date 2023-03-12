@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { Button, Box, Typography, Divider } from '@mui/material';
+import { BrowserView, MobileView } from 'react-device-detect';
 import { theme } from 'theme';
 import styles from './achivement.module.css';
-
 function Achievement() {
   const [currentIndexCarousel, setCurrentIndexCarousel] = useState(1);
   const [windowWidth, setWindowWidth] = useState(null);
@@ -34,9 +34,9 @@ function Achievement() {
     }
   };
 
-  function handleWindowSizeChange() {
-    setWindowWidth(window.innerWidth);
-  }
+  const handleWindowSizeChange = () => {
+    setWindowWidth(window.innerWidth || 0);
+  };
 
   const ButtonPrev = () => {
     return (
@@ -60,6 +60,7 @@ function Achievement() {
   };
 
   useEffect(() => {
+    handleWindowSizeChange();
     window.addEventListener('resize', handleWindowSizeChange);
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);
@@ -91,9 +92,7 @@ function Achievement() {
   }, [windowWidth]);
 
   return (
-    <Box
-      className={styles["container"]}
-    >
+    <Box className={styles['container']}>
       <Box className={styles['header-carousel']}>
         <Box className={styles['header-carousel-left']}>
           <Typography
