@@ -16,7 +16,10 @@ function HomeTopic() {
     >
       <Box
         style={{
-          maxWidth: '50%',
+          maxWidth: {
+            xs: '100%',
+            md: '50%',
+          },
           width: '50%',
           boxSizing: 'border-box',
           padding: '4%',

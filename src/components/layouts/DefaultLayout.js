@@ -13,7 +13,6 @@ const DefaultLayout = ({ children, showFooter = true, seo }) => {
         {/* <Head>
         <link rel="shortcut icon" href="/logo.jpg" />
       </Head> */}
-
         <Box>
           <Header></Header>
         </Box>
