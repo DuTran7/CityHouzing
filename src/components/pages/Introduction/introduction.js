@@ -182,19 +182,6 @@ const Introduction = () => {
             >
               <Box>
                 <Box>
-                  {/* <Button
-                    sx={{
-                      width: '129px',
-                      height: '27px',
-                      background: 'rgba(74, 0, 169, 0.27)',
-                      bordeRadius: '25px',
-                      color: 'rgba(74, 0, 169, 0.27)',
-                    }}
-                  >
-                    <Typography color={theme.palette.primary.main} variant="h6">
-                      Features
-                    </Typography>
-                  </Button> */}
                   <Chip
                     sx={{
                       backgroundColor: `${theme.palette.background.property}`,
@@ -228,7 +215,7 @@ const Introduction = () => {
               </Box>
             </Stack>
 
-            <Grid container sx={{ margin: '0 40px 40px 40px' }}>
+            <Grid container>
               {(features || []).map((item, idx) => {
                 return (
                   <>
