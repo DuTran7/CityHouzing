@@ -13,35 +13,33 @@ const DefaultLayout = ({ children, showFooter = true, seo }) => {
         {/* <Head>
         <link rel="shortcut icon" href="/logo.jpg" />
       </Head> */}
-        <Container maxWidth="xl">
-          <Box>
-            <Header></Header>
-          </Box>
-          <Box>
-            <Box
-              sx={
-                {
-                  // overflowX: {
-                  //   xs: 'hidden',
-                  //   md: 'scroll',
-                  // },
-                  // overflowY: 'hidden',
-                }
+        <Box>
+          <Header></Header>
+        </Box>
+        <Box>
+          <Box
+            sx={
+              {
+                // overflowX: {
+                //   xs: 'hidden',
+                //   md: 'scroll',
+                // },
+                // overflowY: 'hidden',
               }
-            >
-              {children}
-            </Box>
+            }
+          >
+            {children}
           </Box>
-          <Box>
-            {showFooter ? (
-              <>
-                <Footer></Footer>
-              </>
-            ) : (
-              <></>
-            )}
-          </Box>
-        </Container>
+        </Box>
+        <Box>
+          {showFooter ? (
+            <>
+              <Footer></Footer>
+            </>
+          ) : (
+            <></>
+          )}
+        </Box>
       </Stack>
     </>
   );
