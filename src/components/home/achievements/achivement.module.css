@@ -1,0 +1,101 @@
+.container {
+  padding: 2.25rem 0 0 0;
+  background-image: url(/home/achive.png);
+  position: relative;
+  top: 0;
+  margin-bottom: 11.5rem;
+  height: 550px;
+}
+.header-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+
+.header-carousel-left {
+  text-transform: uppercase;
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 3.188rem;
+  margin-bottom: 0.75rem;
+}
+.carousel-content {
+  overflow: visible;
+  top: 5rem;
+}
+
+/* image */
+@media only screen and (min-width: 768px) and (max-width: 1339px) {
+  .achivement-image {
+    width: auto !important;
+    margin: 0 !important;
+  }
+  .carousel-content {
+    overflow: visible;
+    top: 8rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    height: auto;
+    margin-bottom: 5rem;
+  }
+  .header-carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-carousel-left {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-box {
+    position: relative;
+  }
+  .button-prev {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    z-index: 2;
+  }
+  .button-next {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    z-index: 2;
+  }
+  .button-prev img,
+  .button-next img {
+    width: 3rem;
+  }
+
+  .carousel-content {
+    display: inline;
+    position: relative;
+    top: 0 !important;
+    left: 0;
+    right: 0;
+    max-width: 100px;
+  }
+
+  .box-carousel-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1rem;
+  }
+  .achivement-image {
+    width: 15.625rem !important;
+    margin: 0 !important;
+  }
+
+  .button-next,
+  .button-prev {
+    width: 3rem !important;
+  }
+}

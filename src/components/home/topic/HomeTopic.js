@@ -2,63 +2,29 @@ import { Box, Typography } from '@mui/material';
 import { StyledBtnContain, StyledBtnOutlined } from 'components/ukit/Button';
 import React from 'react';
 import { theme } from 'theme';
+import styles from 'components/home/topic/HomeTopic.module.css';
 
 function HomeTopic() {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: '#F3F3F3',
-        height: '70vh',
-      }}
-    >
-      <Box
-        style={{
-          maxWidth: {
-            xs: '100%',
-            md: '50%',
-          },
-          width: '50%',
-          boxSizing: 'border-box',
-          padding: '4%',
-        }}
-      >
-        <Box style={{}}>
+    <Box className={styles.container}>
+      <Box className={styles['left-info']}>
+        <Box className={styles['left-info-content']}>
           <Typography
             color={theme.palette.common.black}
-            style={{
-              fontWeight: 600,
-              fontSize: '24px',
-              lineheight: '29px',
-              marginBottom: '32px',
-            }}
+            className={styles.title}
           >
             The standard Lorem Ipsum passage
           </Typography>
           <Typography
             variant="h3"
             color={theme.palette.common.black}
-            style={{
-              fontWeight: 600,
-              fontSize: '69px',
-              lineheight: '84px',
-              marginBottom: '66px',
-            }}
+            className={styles.content}
           >
             Lorem ipsum dolor sit
           </Typography>
           <Typography
             color={theme.palette.text.subText}
-            style={{
-              fontWeight: 400,
-              fontSize: '16px',
-              lineheight: '32px',
-              borderLeft: '1px solid black',
-              paddingLeft: '17px',
-              marginBottom: '65px',
-            }}
+            className={styles.desciption}
           >
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam
@@ -66,10 +32,10 @@ function HomeTopic() {
           <Box>
             {/* Figma fontSize is 24px */}
             <StyledBtnContain
-              fontSize="20px"
+              fontSize="1.25rem"
               fontWeight="600"
-              lineheight="20px"
-              style={{ marginRight: '9%' }}
+              lineheight="1.25rem"
+              className={styles['button-bottom']}
             >
               Our Services
             </StyledBtnContain>
@@ -78,6 +44,10 @@ function HomeTopic() {
               fontSize="20px"
               fontWeight="600"
               lineheight="20px"
+              className={[
+                styles['button-bottom'],
+                styles['button-bottom-right'],
+              ].join(' ')}
             >
               About Me
             </StyledBtnOutlined>
@@ -87,12 +57,7 @@ function HomeTopic() {
       <img
         src="/home/home-topic.png"
         alt="Home Topic"
-        style={{
-          width: '50%',
-          height: '100%',
-          objectFit: 'cover',
-          objectPosition: 'center',
-        }}
+        className={styles['right-image']}
       />
     </Box>
   );
