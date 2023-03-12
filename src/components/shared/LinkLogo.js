@@ -10,7 +10,7 @@ const LinkLogo = ({ width, height, imageURL }) => {
         }}
       >
         <a>
-          <Image
+          <img
             src={imageURL}
             width={width || 120} // Width of logo
             height={height || 48} // Height of logo

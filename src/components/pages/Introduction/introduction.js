@@ -124,7 +124,7 @@ const Introduction = () => {
                 </Typography>
               </Box>
               <Box sx={{ mb: '105px' }}>
-                <Typography variant="h7" color={theme.palette.common.grey}>
+                <Typography variant="h6" color={'#808080'}>
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                   accusantium doloremque laudantium, totam rem aperiam, eaque
                   ipsa quae ab illo inventore veritatis et quasi architecto
@@ -135,14 +135,14 @@ const Introduction = () => {
                   sx={{
                     boxSizing: ' border-box',
                     width: '100%',
-                    height: '112px',
+                    height: 'auto',
                     background: 'rgba(74, 0, 169, 0.12)',
                     borderLeft: '4px solid #4A00A9',
                     mb: '45px',
                     padding: '20px',
                   }}
                 >
-                  <Typography color={theme.palette.common.grey} variant="h7">
+                  <Typography color={'#808080'} variant="h6">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
                     aperiam, eaque ipsa quae ab illo inventore veritatis et
@@ -331,17 +331,21 @@ const Introduction = () => {
           </Grid>
 
           <Box sx={{ margin: '0 40px 40px 40px' }}>
-            <Grid container>
+            <Grid container sx={{ justifyContent: 'space-around' }}>
               {teams.map((item, idx) => {
                 return (
                   <>
                     <Grid
+                      //  maxWidth={ md:'27.333333% !important'}
                       key={idx}
                       item
                       xs={12}
                       md={4}
                       sm={12}
                       sx={{
+                        maxWidth: {
+                          md: '27.333333% !important',
+                        },
                         background: '#FFFFFF',
                         padding: ' 0 5px 0 0',
                         '& :hover': {

@@ -2,7 +2,8 @@ import { AppBar, Box, Stack, Toolbar, Typography } from '@mui/material';
 import LinkLogo from 'components/shared/LinkLogo';
 import React, { useState, useEffect } from 'react';
 import { theme } from 'theme';
-
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 // useEffect(() => {}, []);
 
 const Footer = ({ ...props }) => {
@@ -13,7 +14,7 @@ const Footer = ({ ...props }) => {
           backgroundColor: theme.palette.primary.main,
           height: '140px',
         }}
-        direction={'row'}
+        direction={{ xs: 'column', md: 'row' }}
         alignItems={'center'}
         justifyContent={'space-between'}
       >
@@ -40,7 +41,7 @@ const Footer = ({ ...props }) => {
             }}
           >
             <LinkLogo
-              width={'380x'}
+              width={'auto'}
               height={'60px'}
               imageURL={'/images/logo/logo1.jpg'}
             />
@@ -51,6 +52,22 @@ const Footer = ({ ...props }) => {
           <Typography color={theme.palette.common.white} variant="h4">
             CityHouzing© 2021
           </Typography>
+          <FacebookIcon
+            sx={{
+              marginLeft: '0 !important',
+              height: '60px',
+              width: '50px',
+              color: theme.palette.common.white,
+            }}
+          ></FacebookIcon>
+          <YouTubeIcon
+            sx={{
+              marginLeft: '0 !important',
+              height: '60px',
+              width: '50px',
+              color: theme.palette.common.white,
+            }}
+          ></YouTubeIcon>
         </Stack>
       </Stack>
     </>

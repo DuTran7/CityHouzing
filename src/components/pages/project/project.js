@@ -73,6 +73,7 @@ const Project = ({ ...props }) => {
             return (
               <>
                 <Grid
+                  key={idx}
                   xl={4}
                   md={12}
                   sm={12}
@@ -147,7 +148,7 @@ const Project = ({ ...props }) => {
                         alignItems: 'flex-start',
                         justifyContent: 'center',
                         paddingLeft: '25px',
-                        // display: 'none',
+                        display: 'none',
                       }}
                     >
                       <Stack
@@ -158,6 +159,11 @@ const Project = ({ ...props }) => {
                         padding={'30px'}
                       >
                         <Box>
+                          <LinkLogo
+                            width={'25px'}
+                            height={'18px'}
+                            imageURL={'/images/icons/electric.png'}
+                          ></LinkLogo>
                           <Typography
                             color={theme.palette.common.white}
                             variant="h7"
@@ -166,6 +172,11 @@ const Project = ({ ...props }) => {
                           </Typography>
                         </Box>
                         <Box>
+                          <LinkLogo
+                            width={'25px'}
+                            height={'18px'}
+                            imageURL={'/images/icons/other.png'}
+                          ></LinkLogo>
                           <Typography
                             color={theme.palette.common.white}
                             variant="h7"

@@ -17,6 +17,7 @@ import { theme } from 'theme';
 import { styled } from '@mui/material';
 import { display } from '@mui/system';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const ListItem = styled('div')(({ theme }) => ({
   '& .item': {
@@ -57,6 +58,8 @@ const Items = [
 const Header = ({ ...props }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const router = useRouter();
+  const [active, setActive] = React.useState('');
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -72,6 +75,23 @@ const Header = ({ ...props }) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  useEffect(() => {
+    console.log('============route name', router.pathname.slice(1));
+    //setActive(router.pathname.slice(1));
+    switch (router.pathname.slice(1)) {
+      case 'introduction':
+        return setActive('giới thiệu');
+      case 'project':
+        return setActive('dự án');
+      case 'news':
+        return setActive('tin tức');
+      case '':
+        return setActive('trang chủ');
+      default:
+        return null;
+    }
+  }, []);
   return (
     <>
       <AppBar
@@ -148,7 +168,7 @@ const Header = ({ ...props }) => {
                         color: ' #4A00A9',
                       },
                     }}
-                    variant="h4"
+                    variant="h5"
                     className="item"
                   >
                     <Link
@@ -202,12 +222,22 @@ const Header = ({ ...props }) => {
                 <>
                   <Typography
                     sx={{
-                      color: theme.palette.common.black,
+                      color:
+                        active === item.name.toLowerCase()
+                          ? theme.palette.primary.main
+                          : theme.palette.common.black,
                       cursor: 'pointer',
+                      boxShadow:
+                        active === item.name.toLowerCase()
+                          ? 'inset 0 -5px 0 #4A00A9'
+                          : '',
                       paddingBottom: '15x',
                       mr: '50px',
                       pb: '15px',
                       '&:hover': {
+                        '& a': {
+                          color: ' #4A00A9 !important',
+                        },
                         //borderBottom: '2px solid #4A00A9',
                         boxShadow: 'inset 0 -5px 0 #4A00A9',
                         color: ' #4A00A9',
@@ -217,12 +247,7 @@ const Header = ({ ...props }) => {
                     variant="h4"
                     className="item"
                   >
-                    <Link
-                      sx={{ '& a:hover': { color: '#4A00A9 !important' } }}
-                      href={item.linkTo}
-                    >
-                      {item.name}
-                    </Link>
+                    <Link href={item.linkTo}>{item.name}</Link>
                   </Typography>
                 </>
               );
@@ -236,10 +261,10 @@ const Header = ({ ...props }) => {
                   paddingBottom: '15x',
                   mr: '50px',
                   background: '#FFE70C',
-                  padding: '0 40px',
+                  padding: '10px 40px',
                   '&:hover': {
                     background: theme.palette.common.white,
-                    color: '#FFE70C',
+                    color: theme.palette.primary.main,
                   },
                 }}
                 variant="h4"
