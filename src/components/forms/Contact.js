@@ -109,6 +109,7 @@ function Contact() {
               <Controller
                 control={control}
                 name="fullName"
+                height={'60px'}
                 render={({ field: { onChange, onBlur, value, ref } }) => (
                   <TextField
                     id="outlined-basic"
@@ -134,6 +135,7 @@ function Contact() {
               <Controller
                 control={control}
                 name="phone"
+                height={'60px'}
                 render={({ field: { onChange, onBlur, value, ref } }) => (
                   <TextField
                     id="outlined-basic"
@@ -160,6 +162,7 @@ function Contact() {
               <Controller
                 control={control}
                 name="district"
+                height={'60px'}
                 render={({ field: { onChange, onBlur, value, ref } }) => (
                   <Select
                     labelId="demo-simple-select-label"
@@ -193,6 +196,7 @@ function Contact() {
               <Controller
                 control={control}
                 name="price"
+                height={'60px'}
                 render={({ field: { onChange, onBlur, value, ref } }) => (
                   <Select
                     labelId="demo-simple-select-label"
@@ -235,6 +239,7 @@ function Contact() {
                 fontSize="1.25rem"
                 fontWeight={600}
                 lineheight="1.25rem"
+                marginTop="1.50rem"
                 // style={{ marginRight: '9%' }}
                 type="submit"
               >
