@@ -50,11 +50,21 @@ const BreadCrumb = ({ title, listItem, ...props }) => {
                   color="inherit"
                   href="/"
                 >
-                  <HomeIcon
-                    sx={{ mr: 0.5, color: theme.palette.primary.main }}
-                    fontSize="inherit"
-                  />
-                  Trang chủ
+                  <Box sx={{ display: 'flex' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        pb: '2px',
+                      }}
+                    >
+                      <HomeIcon
+                        sx={{ mr: 0.5, color: theme.palette.primary.main }}
+                        fontSize="inherit"
+                      />
+                    </div>
+                    <div>Trang chủ</div>
+                  </Box>
                 </Link>
                 <Link
                   sx={{

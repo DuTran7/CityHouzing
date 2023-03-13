@@ -73,7 +73,12 @@ const Footer = ({ ...props }) => {
             </Typography>
           </Box>
 
-          <Stack sx={{ mr: '40px' }} direction={'row'} spacing={12}>
+          <Stack
+            sx={{ mr: '40px' }}
+            alignItems={'center'}
+            direction={'row'}
+            spacing={12}
+          >
             <Typography
               sx={{
                 fontSize: {
