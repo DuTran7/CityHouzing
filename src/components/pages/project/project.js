@@ -110,7 +110,7 @@ const Project = ({ ...props }) => {
                         width: '100%',
                         height: '155px',
                         textAlign: 'start',
-                        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                        backgroundColor: 'rgb(0 0 0 / 66%)',
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'flex-start',
@@ -123,7 +123,7 @@ const Project = ({ ...props }) => {
                         style={{ marginBottom: '30px' }}
                         variant="h7"
                       >
-                        Bình Thạnh
+                        BÌNH THẠNH
                       </Typography>
                       <Typography
                         color={theme.palette.common.white}
@@ -147,7 +147,11 @@ const Project = ({ ...props }) => {
                         flexDirection: 'column',
                         alignItems: 'flex-start',
                         justifyContent: 'center',
-                        paddingLeft: '25px',
+                        paddingLeft: {
+                          md: '25px',
+                          sm: '0',
+                          xs: '0',
+                        },
                         display: 'none',
                       }}
                     >
@@ -158,12 +162,14 @@ const Project = ({ ...props }) => {
                         height={'100%'}
                         padding={'30px'}
                       >
-                        <Box>
-                          <LinkLogo
-                            width={'25px'}
-                            height={'18px'}
-                            imageURL={'/images/icons/electric.png'}
-                          ></LinkLogo>
+                        <Box sx={{ display: 'flex' }}>
+                          <Box>
+                            <LinkLogo
+                              width={'25px'}
+                              height={'18px'}
+                              imageURL={'/images/icons/electric.png'}
+                            ></LinkLogo>
+                          </Box>
                           <Typography
                             color={theme.palette.common.white}
                             variant="h7"
@@ -171,12 +177,14 @@ const Project = ({ ...props }) => {
                             4k/kwh
                           </Typography>
                         </Box>
-                        <Box>
-                          <LinkLogo
-                            width={'25px'}
-                            height={'18px'}
-                            imageURL={'/images/icons/other.png'}
-                          ></LinkLogo>
+                        <Box sx={{ display: 'flex' }}>
+                          <Box>
+                            <LinkLogo
+                              width={'25px'}
+                              height={'18px'}
+                              imageURL={'/images/icons/other.png'}
+                            ></LinkLogo>
+                          </Box>
                           <Typography
                             color={theme.palette.common.white}
                             variant="h7"
@@ -184,12 +192,14 @@ const Project = ({ ...props }) => {
                             100k/p
                           </Typography>
                         </Box>
-                        <Box>
-                          <LinkLogo
-                            width={'25px'}
-                            height={'18px'}
-                            imageURL={'/images/icons/wifi.png'}
-                          ></LinkLogo>
+                        <Box sx={{ display: 'flex' }}>
+                          <Box>
+                            <LinkLogo
+                              width={'25px'}
+                              height={'18px'}
+                              imageURL={'/images/icons/wifi.png'}
+                            ></LinkLogo>
+                          </Box>
                           <Typography
                             color={theme.palette.common.white}
                             variant="h7"

@@ -99,7 +99,7 @@ const Header = ({ ...props }) => {
           color: theme.palette.common.black,
         }}
       >
-        <Toolbar sx={{ padding: '20px' }} disableGutters>
+        <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
@@ -117,13 +117,46 @@ const Header = ({ ...props }) => {
             }}
           >
             <LinkLogo
-              height={'130px'}
-              width={'162px'}
+              height={'180px'}
+              width={'200px'}
               imageURL={'/images/logo/logo.jpg'}
             />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href=""
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+              marginLeft: '20px',
+            }}
+          >
+            <LinkLogo
+              height={'76px'}
+              width={'112px'}
+              imageURL={'/images/logo/logo.jpg'}
+            />
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}></Box>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'flex', md: 'none' },
+              justifyContent: {
+                xs: 'right',
+                sm: 'right',
+              },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -184,72 +217,56 @@ const Header = ({ ...props }) => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            <LinkLogo
-              height={'76px'}
-              width={'112px'}
-              imageURL={'/images/logo/logo.jpg'}
-            />
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}></Box>
-
           <Box
             sx={{
               flexGrow: 0,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', sm: 'none', md: 'flex' },
               flexDirection: 'row',
             }}
           >
-            {Items.map((item, index) => {
-              return (
-                <>
-                  <Typography
-                    sx={{
-                      color:
-                        active === item.name.toLowerCase()
-                          ? theme.palette.primary.main
-                          : theme.palette.common.black,
-                      cursor: 'pointer',
-                      boxShadow:
-                        active === item.name.toLowerCase()
-                          ? 'inset 0 -5px 0 #4A00A9'
-                          : '',
-                      paddingBottom: '15x',
-                      mr: '50px',
-                      pb: '15px',
-                      '&:hover': {
-                        '& a': {
-                          color: ' #4A00A9 !important',
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                paddingTop: '10px',
+              }}
+            >
+              {Items.map((item, index) => {
+                return (
+                  <>
+                    <Typography
+                      sx={{
+                        color:
+                          active === item.name.toLowerCase()
+                            ? theme.palette.primary.main
+                            : theme.palette.common.black,
+                        cursor: 'pointer',
+                        boxShadow:
+                          active === item.name.toLowerCase()
+                            ? 'inset 0 -5px 0 #4A00A9'
+                            : '',
+                        paddingBottom: '15x',
+                        mr: '50px',
+                        pb: '15px',
+                        '&:hover': {
+                          '& a': {
+                            color: ' #4A00A9 !important',
+                          },
+                          //borderBottom: '2px solid #4A00A9',
+                          boxShadow: 'inset 0 -5px 0 #4A00A9',
+                          color: ' #4A00A9',
                         },
-                        //borderBottom: '2px solid #4A00A9',
-                        boxShadow: 'inset 0 -5px 0 #4A00A9',
-                        color: ' #4A00A9',
-                      },
-                    }}
-                    key={index}
-                    variant="h4"
-                    className="item"
-                  >
-                    <Link href={item.linkTo}>{item.name}</Link>
-                  </Typography>
-                </>
-              );
-            })}
+                      }}
+                      key={index}
+                      variant="h4"
+                      className="item"
+                    >
+                      <Link href={item.linkTo}>{item.name}</Link>
+                    </Typography>
+                  </>
+                );
+              })}
+            </Box>
 
             <Box>
               <Typography
@@ -260,9 +277,11 @@ const Header = ({ ...props }) => {
                   mr: '50px',
                   background: '#FFE70C',
                   padding: '10px 40px',
+                  border: '1px solid #FFE70C',
                   '&:hover': {
-                    background: theme.palette.common.white,
-                    color: theme.palette.primary.main,
+                    background: theme.palette.primary.main,
+                    color: '#FFE70C',
+                    border: '1px solid #FFE70C',
                   },
                 }}
                 variant="h4"
