@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f3f3f3;
+  height: 40.625rem;
+}
+
+.left-info {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 4%;
+}
+.right-image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.813rem;
+  margin-bottom: 2rem;
+}
+
+.content {
+  font-weight: 600;
+  font-size: 4.375rem;
+  line-height: 5.25rem;
+  margin-bottom: 4.125rem;
+}
+
+.desciption {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  border-left: 0.063rem solid black;
+  padding-left: 1rem;
+  margin-bottom: 3.75rem;
+}
+
+.button-bottom {
+  margin: 0 1rem 1rem 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1052px) {
+  .title {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.313rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .content {
+    font-weight: 600;
+    font-size: 3.875rem;
+    line-height: 4.75rem;
+    margin-bottom: 3.625rem;
+  }
+
+  .desciption {
+    font-weight: 400;
+    font-size: 0.5rem;
+    line-height: 1.5rem;
+    border-left: 0.063rem solid black;
+    padding-left: 1rem;
+    margin-bottom: 3.25rem;
+  }
+
+  .button-bottom-right {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f3f3f3;
+    height: 40.625rem;
+    background-image: url(/home/home-topic.png);
+  }
+  .left-info {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .left-info-content {
+    background-color: rgba(0, 0, 0, 0.445);
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .right-image {
+    display: none;
+  }
+  .title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .content {
+    font-size: 3rem;
+    margin-bottom: 1.85rem;
+    color: white;
+  }
+
+  .desciption {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  .button-bottom-right {
+    margin: 0;
+  }
+}

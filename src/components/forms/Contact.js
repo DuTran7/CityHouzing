@@ -50,12 +50,7 @@ function Contact() {
     { value: '4 - 5 triệu', key: 'TD', id: Math.ceil(Math.random() * 9999) },
   ];
   console.log('errors', errors);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     debugger;
-  //   }, 5000);
-  // }, []);
-  // .css-454srj-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline
+  useEffect(() => {}, []);
 
   return (
     <Box
