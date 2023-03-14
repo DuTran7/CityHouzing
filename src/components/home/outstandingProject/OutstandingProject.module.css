@@ -14,6 +14,32 @@
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  border-radius: 0.313rem;
+
+}
+
+.box-warp-content {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.313rem;
+}
+.box-warp-content:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box-warp-content:hover > div .btn-view-detail {
+  opacity: 1;
+}
+
+.btn-view-detail {
+  height: 1.688rem;
+  font-size: 0.875;
+  line-height: 1.5rem;
+  width: 100%;
+  height: 1.5rem;
+  opacity: 0;
+  animation: appear_element 1s;
+  transition: 2s;
 }
 
 .box-warp-content {
@@ -36,7 +62,7 @@
   width: 100%;
   height: 1.5rem;
   opacity: 0;
-  transition: 2s;
+  transition: 1s;
 }
 
 
