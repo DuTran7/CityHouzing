@@ -137,6 +137,7 @@ export const StyledBtnContain = styled(StyledBtn)(({fontSize,fontWeight, lineHei
   textTransform: "capitalize",
   textDecoration: 'none',
   textAlign: 'center',
+  borderRadius: "0.313rem"
 }));
 export const StyledBtnOutlined = styled(StyledBtn)(({fontSize,fontWeight,lineHeight}) => ({
   padding: '0',
@@ -153,6 +154,7 @@ export const StyledBtnOutlined = styled(StyledBtn)(({fontSize,fontWeight,lineHei
   },
   textDecoration: 'none',
   textAlign: 'center',
+  borderRadius: "0.313rem"
 }));
 
 export const StyledIconLabelButton = styled(StyledBtn)(() => ({}));

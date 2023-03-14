@@ -76,6 +76,7 @@ function OutstandingProject({ data }) {
             </Typography>
             <StyledBtnContain
               fontWeight="600"
+              sx={{ borderRadius: '0.25rem' }}
               className={styles['btn-view-detail']}
             >
               View Details
@@ -94,13 +95,14 @@ function OutstandingProject({ data }) {
             return (
               <Grid key={project.id} xl={8} lg={8} md={12} sm={12} xs={12} item>
                 <Box
-                  style={{
+                  sx={{
                     backgroundImage: "url('/home/project.png')",
                     backgroundPosition: 'center bottom',
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     width: '100%',
                     height: '100%',
+                    borderRadius: '0.313rem',
                   }}
                 >
                   <BoxContent project={project} index={index}></BoxContent>
@@ -118,6 +120,7 @@ function OutstandingProject({ data }) {
                     backgroundRepeat: 'no-repeat',
                     width: '100%',
                     height: '100%',
+                    borderRadius: '0.313rem',
                   }}
                 >
                   <Box
