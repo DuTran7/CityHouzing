@@ -13,10 +13,20 @@ function News({ news }) {
       style={{
         border: `1px solid ${theme.palette.borderBox.box}`,
         backgroundColor: theme.palette.common.white,
+        borderTopLeftRadius: '0.313rem',
+        borderTopRightRadius: '0.313rem',
       }}
     >
       <Box>
-        <img alt={news.title} src={news.image} width={'100%'} />
+        <img
+          alt={news.title}
+          src={news.image}
+          width={'100%'}
+          style={{
+            borderTopLeftRadius: '0.313rem',
+            borderTopRightRadius: '0.313rem',
+          }}
+        />
         <Box style={{ padding: '8% 8% 0 8%' }}>
           <Typography
             style={{

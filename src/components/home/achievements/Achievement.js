@@ -44,7 +44,10 @@ function Achievement() {
         onClick={() => handleClick('prev')}
         className={styles['button-prev']}
       >
-        <img src="/home/previous-button.png" />
+        <img
+          src="/home/previous-button.png"
+          style={{ borderRadius: '0.313rem' }}
+        />
       </Button>
     );
   };
@@ -54,7 +57,7 @@ function Achievement() {
         onClick={() => handleClick('next')}
         className={styles['button-next']}
       >
-        <img src="/home/next-button.png" />
+        <img src="/home/next-button.png" style={{ borderRadius: '0.313rem' }} />
       </Button>
     );
   };
@@ -154,7 +157,11 @@ function Achievement() {
                 {images.map((image) => (
                   <img
                     key={Math.ceil(Math.random() * 99999999999)}
-                    style={{ marginRight: '5rem', width: '520px' }}
+                    style={{
+                      marginRight: '5rem',
+                      width: '520px',
+                      borderRadius: '0.313rem',
+                    }}
                     alt="Achivement"
                     src={image}
                     className={styles['achivement-image']}

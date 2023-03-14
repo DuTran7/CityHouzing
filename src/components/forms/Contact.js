@@ -73,7 +73,7 @@ function Contact() {
               src="/home/form-left.png"
               width={'100%'}
               height={'100%'}
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', borderRadius: '0.313rem' }}
             />
           </Box>
         </Grid>
