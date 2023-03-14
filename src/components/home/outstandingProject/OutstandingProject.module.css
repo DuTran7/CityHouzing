@@ -16,6 +16,35 @@
   overflow: hidden;
 }
 
+.box-warp-content {
+  height: 100%;
+  width: 100%;
+}
+.box-warp-content:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@keyframes appear_element {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.box-warp-content:hover > div .btn-view-detail {
+  display: block;
+}
+
+.btn-view-detail {
+  height: 1.688rem;
+  font-size: 0.875;
+  line-height: 1.5rem;
+  width: 100%;
+  height: 1.5rem;
+  display: none;
+  opacity: 1;
+  animation: appear_element 1s;
+}
+
+
 .box-content-name {
   font-size: 1.375rem;
   font-weight: 600;
