@@ -5,13 +5,7 @@ import { makeStyles } from '@mui/styles';
 import styles from 'components/home/outstandingProject/OutstandingProject.module.css';
 
 const useStyles = makeStyles({
-  hoverElement: {
-    height: '100%',
-    width: '100%',
-    '&:hover': {
-      boxShadow: `rgba(0, 0, 0, 0.24) 0px 3px 8px`,
-    },
-  },
+  hoverElement: {},
 });
 
 function OutstandingProject({ data }) {
@@ -63,17 +57,13 @@ function OutstandingProject({ data }) {
           alignItems: 'center',
           justifyContent: 'center',
         }}
-        className={classes.hoverElement}
+        className={styles['box-warp-content']}
       >
-        <Box
-          className={styles['box-content']}
-        >
-          <Typography
-            className={styles['box-content-name']}
-          >
+        <Box className={styles['box-content']}>
+          <Typography className={styles['box-content-name']}>
             {project.name}
           </Typography>
-          <Box sx={{ textAlign: 'center' }}>
+          <Box sx={{ textAlign: 'center', height: '3.875rem' }}>
             <Typography
               style={{
                 fontSize: '0.813rem',
@@ -85,15 +75,8 @@ function OutstandingProject({ data }) {
               Great deal available
             </Typography>
             <StyledBtnContain
-              fontSize="1,25rem"
               fontWeight="600"
-              lineheight="1,25rem"
-              sx={{
-                height: '1.688rem',
-                fontSize: '0.875',
-                lineheight: '1.5rem',
-                width: "100%"
-              }}
+              className={styles['btn-view-detail']}
             >
               View Details
             </StyledBtnContain>
@@ -144,7 +127,7 @@ function OutstandingProject({ data }) {
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}
-                    className={classes.hoverElement}
+                    className={styles['box-warp-content']}
                   >
                     <BoxContent project={project} index={index}></BoxContent>
                   </Box>

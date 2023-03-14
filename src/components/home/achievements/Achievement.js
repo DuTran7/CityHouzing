@@ -102,6 +102,7 @@ function Achievement() {
               fontWeight: 600,
               lineHeight: '3.188rem',
               marginBottom: '0.75rem',
+              textAlign: 'center',
             }}
           >
             Thành tựu
